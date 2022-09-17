@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.category_container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+    max-width: 1100px;
+    font-family: "Libre Franklin";
+    font-weight: 900;
+    text-transform: none;
+    font-size: 24px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;
+}
+
+.more_articles {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+    padding-bottom: 20px;
+}
+
+.container_last {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+}
+
+.article-container {
+    width: 100%;
+    flex: 0 0 33.33333%;
+}
+
+.info-container {
+    padding: 10px;
+}
+
+.info-container:hover {
+    background-color: rgb(255, 235, 235);
+    transition: 0.5s;
+}
+
+.topic {
+    color: red;
+    font-family: "Inter";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 9px;
+}
+
+.title {
+    font-family: "Libre Franklin";
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.description {
+    font-family: "Libre Franklin";
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.close_btn {
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.open {
+    border-radius: 15px;
+    padding: 20px 150px 20px 150px;
+    border: none;
+    font-family: 'Libre Franklin';
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.open:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .category_container {
+        margin-top: 15px;
+    }
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container, .category_container, .container_last {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .article-container {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .article-container {
+        flex: 0 0 100%;
+    }
+    
+    .open {
+        padding: 20px 50px 20px 50px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="#b">World</a>
+        <a href="#c" id="red">Interviews</a>
+        <a href="#d">Sports &#38; Entertainment</a>
+        <a href="#e">Coronavirus</a>
+        <a href="#f">Business &#38; Technology</a>
+        <a href="#g">Environment</a>
+    </div>
+    
+    <!--Student Life-->
+    <div class="category_container" id="a">
+        Student Life
+    </div>
+    
+    <div class="container">
+        <div class="article-container">
+            <a href="articles/7-Years-of-Toxic-Drugs.html">
+                <div class="info-container">
+                    <img src="image-135.png" width="100%" height="auto">
+                    <p class="topic">Vancouver</p>
+                    <div class="title">7 Years of Toxic Drugs</div>
+                    <div class="description">165 deaths from toxic drugs in March 2022. Averaging more than five deaths per day, the dangerous use of toxic drugs now contributes the most to preventable deaths in British Columbia.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/The-First-Vancouver-Sun-Run-After-the-Pandemic.html">
+                <div class="info-container">
+                    <img src="run-3.png" width="100%" height="auto">
+                    <p class="topic">Vancouver</p>
+                    <div class="title">The First Vancouver Sun Run Since the Pandemic</div>
+                    <div class="description">After two years, the Vancouver Sun Run has finally returned, with 18,576 runners swarming the streets downtown in the iconic 10-kilometer race on the fourth Sunday of April 2022.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/2022-AP-Exams-Do’s-and-Don’ts.html">
+                <div class="info-container">
+                    <img src="exam.png" width="100%" height="auto">
+                    <p class="topic">EDUCATION</p>
+                    <div class="title">2022 AP Exam Do&#39;s and Don&#39;ts</div>
+                    <div class="description">The AP exams are a little over 3 weeks away, and a lot of students may find themselves slumped with chapters, concepts, and materials to study and learn before those dreaded test days.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Princeton,-UPenn,-and-Cornell-Hide-Acceptance-Rates.html">
+                <div class="info-container">
+                    <img src="percentage.png" width="100%" height="auto">
+                    <p class="topic">EDUCATION</p>
+                    <div class="title">Princeton, UPenn, and Cornell Hide Acceptance Rates</div>
+                    <div class="description">Ivy Day, the annual regular decision release date for the eight Ivy League schools, fell on March 31, 2022. The plummet in acceptance rates was not surprising&mdash;however, the decision from Princeton, the University of Pennsylvania, and Cornell to withhold their acceptance data was.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/UC-Berkeley’s-Enrolment-Freeze-Explained.html">
+                <div class="info-container">
+                    <img src="image.png" width="100%" height="auto">
+                    <p class="topic">EDUCATION</p>
+                    <div class="title">UC Berkeley&#39;s Enrolment Freeze Explained</div>
+                    <div class="description">A recent court decision from the Supreme Court of California ruled that the University of California, Berkeley must freeze its enrolment to 2020-2021 levels, effectively barring thousands of students that otherwise would have received an offer from attending the school. 
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/A-Student's-Experience-at-a-Film-Festival.html">
+                <div class="info-container">
+                    <img src="image-2.png" width="100%" height="auto">
+                    <p class="topic">VANCOUVER</p>
+                    <div class="title">A Student&#39;s Experience at a Film Festival</div>
+                    <div class="description">The dream of almost every filmmaker is to have their work be shown on the big screen. Whether that be in the movie or home theater, there is nothing like seeing the result of your hours of effort screened to a full audience. 
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!--Hidden Articles-->
+        <div id="close_btn" class="close_btn">
+            <button class="open" onclick="Open()">More Articles</button>
+        </div>
+        
+        <script>
+            function Open() {
+                var articles = document.getElementById("more_articles");
+                var button = document.getElementById("close_btn");
+                articles.style.display = "flex";
+                button.style.display = "none";
+            }
+        </script>
+        
+         <div id="more_articles" class="more_articles" style="display:none">
+            <div class="article-container">
+                <a href="articles/What-Does-the-2021-Canadian-Census-Mean-for-BC.html">
+                    <div class="info-container">
+                        <img src="image-32.png" width="100%" height="auto">
+                        <p class="topic">VANCOUVER</p>
+                        <div class="title">What Does the 2021 Canadian Census Mean for BC?</div>
+                        <div class="description">The 2021 Canadian Census, which recently released data for population growth since the 2016 Census, showed that, for the first time ever, BC surpassed 5 million residents. 
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/5-Benefits-of-Meditation-For-Students-and-How-You-Can-Incorporate-It-in-Your-Life.html">
+                    <div class="info-container">
+                        <img src="image-33.png" width="100%" height="auto">
+                        <p class="topic">Mental Health</p>
+                        <div class="title">5 Benefits of Meditation For Students and How You Can Incorporate It in Your Life</div>
+                        <div class="description">We have seen many research cases and studies that explain the positive impact meditation has, but sometimes we often have trouble incorporating new habits in our lives or creating a habit in the first place.  
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Do-University-Acceptance-Rates-Really-Mean-Anything.html">
+                    <div class="info-container">
+                        <img src="image-34.png" width="100%" height="auto">
+                        <p class="topic">Education</p>
+                        <div class="title">Do University Acceptance Rates Really Mean Anything?</div>
+                        <div class="description">Beyond showing the obvious bracket that a school falls under in selectivity, acceptance rates are complicated by many other factors than “all applicants who apply have a 20% chance of being admitted.”  
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/The-Goal-of-High-School-Sports.html">
+                    <div class="info-container">
+                        <img src="image-35.png" width="100%" height="auto">
+                        <p class="topic">Education</p>
+                        <div class="title">The Goal of High School Sports</div>
+                        <div class="description">On the surface, high school sports may seem like a bad idea. One could argue that creating a space for hormones to fuel inter&ndash;school rivalries is detrimental. However, they are also a chance to build character, resilience, and a strong work-ethic.  
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Science-Teacher-Gets-Arrested-After-Vaccinating-17–year–old-Student.html">
+                    <div class="info-container">
+                        <img src="image-36.png" width="100%" height="auto">
+                        <p class="topic">Coronavirus</p>
+                        <div class="title">Science Teacher Gets Arrested After Vaccinating 17&ndash;year&ndash;old Student</div>
+                        <div class="description">Last week, a New York science teacher was arrested for administering a COVID&ndash;19 vaccine to a 17&ndash;year&ndash;old student. According to officials, the school teacher had no formal medical qualifications to give a vaccine.  
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/NYU-Hits-a-New-Record-for-First-Year-Admission,-Receiving-105k-Applications.html">
+                    <div class="info-container">
+                        <img src="image-37.png" width="100%" height="auto">
+                        <p class="topic">Education</p>
+                        <div class="title">NYU Hits a New Record for First-Year Admission, Receiving 105k Applications</div>
+                        <div class="description">New York University received over 105,000 applications for the class of 2026, marking the highest number of applicants the university has received in its almost 200-year history. 
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/What-is-Día-de-los-Muertos.html">
+                    <div class="info-container">
+                        <img src="image-38.png" width="100%" height="auto">
+                        <p class="topic">Culture</p>
+                        <div class="title">What is Día de los Muertos?</div>
+                        <div class="description">Originating thousands of years ago from the Aztec and Nahua people, the Day of the Dead is a Mexican holiday where families welcome back the souls of deceased relatives in a festive reunion. 
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Movies-to-Watch-and-Places-to-Visit-This-Halloween.html">
+                    <div class="info-container">
+                        <img src="image-39.png" width="100%" height="auto">
+                        <p class="topic">Opinion</p>
+                        <div class="title">Movies to Watch and Places to Visit This Halloween</div>
+                        <div class="description">Despite the onset of the pandemic, here are some entertaining movies to watch and places to go to with your family and friends this October.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/New-Canadian-YA-Releases.html">
+                    <div class="info-container">
+                        <img src="image-40.png" width="100%" height="auto">
+                        <p class="topic">Opinion</p>
+                        <div class="title">New Canadian YA Releases</div>
+                        <div class="description">As we shift into our second full pandemic school year, here are some new young adult novels by none other than our own Canadian authors to watch out for.
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="close_btn">
+                <a href="more-articles-student-life.html" target="_blank">
+                    <button class="open">More Articles</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!--World-->
+    <div class="category_container" id="b">
+        World
+    </div>
+    
+    <div class="container">
+        <div class="article-container">
+            <a href="articles/Psilocybin,-Otherwise-Known-as-Magic-Mushrooms.html">
+                <div class="info-container">
+                    <img src="mushrooms-2.png" width="100%" height="auto">
+                    <p class="topic">CANADA</p>
+                    <div class="title">Psilocybin, Otherwise Known as Magic Mushrooms</div>
+                    <div class="description">On Thursday, 6 terminally-ill Canadians received the country’s first legally produced psilocybin - a psychoactive compound found in "magic" mushrooms. The substance has shown promise for treating end-of-life anxiety in people with life-threatening diseases.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Bill-C-21:-Canada's-Handgun-Freeze.html">
+                <div class="info-container">
+                    <img src="image-3.png" width="100%" height="auto">
+                    <p class="topic">CANADA</p>
+                    <div class="title">Bill C&ndash;21 Canada&#39;s Handgun Freeze</div>
+                    <div class="description">Following several high-profile deadly shootings in the US, Canadian Prime Minister Justin Trudeau has proposed Bill C&ndash;21, which would effectively freeze the buying of handguns for Canadians.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/What-is-Monkeypox.html">
+                <div class="info-container">
+                    <img src="image-4.png" width="100%" height="auto">
+                    <p class="topic">CANADA</p>
+                    <div class="title">What is Monkeypox?</div>
+                    <div class="description">The virus is transmitted through close contact with an infected animal, material, or human and usually spreads through large respiratory droplets when transmitted between people.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Finland-and-Sweden:-The-Route-to-NATO.html">
+                <div class="info-container">
+                    <img src="image-5.png" width="100%" height="auto">
+                    <p class="topic">EUROPE</p>
+                    <div class="title">Finland and Sweden: The Route to NATO</div>
+                    <div class="description">“This is a historic day. A new era is opening,” Finnish President Sauli Niinistö said at a joint press conference with Prime Minister Sanna Marin.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/The-History-and-Implications-of-Roe-v.-Wade.html">
+                <div class="info-container">
+                    <img src="image-6.png" width="100%" height="auto">
+                    <p class="topic">U.S.</p>
+                    <div class="title">The History and Implications of Roe v. Wade</div>
+                    <div class="description">On January 22, 1973, the U.S. Supreme Court ruled abortion as a constitutional right on a 7-2 split. Almost half a century later, that historical decision is in danger of being overturned.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Russia-&-Ukraine-Conflict:-US-Journalist-Killed-by-Russian-Forces.html">
+                <div class="info-container">
+                    <img src="image-7.png" width="100%" height="auto">
+                    <p class="topic">EUROPE</p>
+                    <div class="title">Russia & Ukraine Conflict: US Journalist Killed by Russian Forces</div>
+                    <div class="description">Brent Renaud, a journalist and award-winning filmmaker who had previously worked for the New York Times and was covering Russia's war against Ukraine, was shot dead Sunday near Kyiv, according to local police and witnesses.
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <!--Hidden Articles-->
+        <div id="close_btn2" class="close_btn">
+            <button class="open" onclick="Open2()">More Articles</button>
+        </div>
+        
+        <script>
+            function Open2() {
+                var articles = document.getElementById("more_articles2");
+                var button = document.getElementById("close_btn2");
+                articles.style.display = "flex";
+                button.style.display = "none";
+            }
+        </script>
+        
+        <div id="more_articles2" class="more_articles" style="display:none">
+            <div class="article-container">
+                <a href="articles/Debate-Over-No-fly-Zone-in-Ukraine.html">
+                    <div class="info-container">
+                        <img src="image-50.png" width="100%" height="auto">
+                        <p class="topic">Europe</p>
+                        <div class="title">Debate Over No&ndash;fly Zone in Ukraine</div>
+                        <div class="description">Ukrainian President Volodymyr Zelensky has repeatedly pleaded with the West to enforce a &quot;no&ndash;fly zone&quot; over &quot;significant parts&quot; of Ukraine. 
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Can-Macron-brokered-Summit-Defuse-Tensions-Between-Biden-and-Putin.html">
+                    <div class="info-container">
+                        <img src="image-51.png" width="100%" height="auto">
+                        <p class="topic">Europe</p>
+                        <div class="title">Can Macron&ndash;brokered Summit Defuse Tensions Between Biden and Putin?</div>
+                        <div class="description">For the past couple of weeks, the world has watched anxiously as Russia inched closer to what appeared to be an invasion against Ukraine.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Protests-in-Kazakhstan-Over-High-Fuel-Prices-and-Government-Corruption.html">
+                    <div class="info-container">
+                        <img src="image-52.png" width="100%" height="auto">
+                        <p class="topic">International</p>
+                        <div class="title">Protests in Kazakhstan Over High Fuel Prices and Government Corruption</div>
+                        <div class="description">What started as initial public anger over increasing fuel prices expanded to nationwide protests for government corruption, living standards, poverty, and unemployment in the former Soviet nation.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Crisis-Along-the-Poland–Belarus-Border.html">
+                    <div class="info-container">
+                        <img src="image-53.png" width="100%" height="auto">
+                        <p class="topic">EUROPE</p>
+                        <div class="title">Crisis Along the Poland&ndash;Belarus Border</div>
+                        <div class="description">Back in August, Afghans fleeing Taliban rule led to a spike in border crossings in Belarus as the migrants fled to the more prosperous nations bordering Belarus, all of them, with the exception of Ukraine, being part of the EU.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Six-Years-After-the-Paris-Agreement—Will-COP26-be-Any-Different.html">
+                    <div class="info-container">
+                        <img src="image-54.png" width="100%" height="auto">
+                        <p class="topic">Climate Change</p>
+                        <div class="title">Six Years After the Paris Agreement&mdash;Will COP26 be Any Different?</div>
+                        <div class="description">In what is believed to be the world’s best last chance to fully curb the effects of climate change, COP26&mdash;the 26th iteration of the Conference of Parties&mdash;began on October 31st, 2021 in Glasgow.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Canadian-Party-Leaders'-Uncertain-Future:-a-Looming-Threat.html">
+                    <div class="info-container">
+                        <img src="image-55.png" width="100%" height="auto">
+                        <p class="topic">Canada</p>
+                        <div class="title">Canadian Party Leaders&#39; Uncertain Future: a Looming Threat</div>
+                        <div class="description">As I and many others predicted, the unsurprising result of the 2021 snap election was another Liberal minority. Although parliament is now back in session, it is apparent that a looming cloud hangs over the heads of the party leaders.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Climate–Induced-Famine:-Madagascar.html">
+                    <div class="info-container">
+                        <img src="image-56.png" width="100%" height="auto">
+                        <p class="topic">International</p>
+                        <div class="title">Climate&ndash;Induced Famine: Madagascar</div>
+                        <div class="description">Tens of thousands of people are suffering catastrophic levels of starvation after years without rain instigated a near&ndash;nonexistent harvest season. 
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/The-Moon-is-Drifting-Away-From-Earth.html">
+                    <div class="info-container">
+                        <img src="image-57.png" width="100%" height="auto">
+                        <p class="topic">Space</p>
+                        <div class="title">The Moon is Drifting Away From Earth</div>
+                        <div class="description">Today, the moon is responsible for the Earth’s seasons, day&ndash;night cycle, ocean tides, and much of the climate. So then, what would happen if the moon were to slowly drift away from the Earth and leave our planet by itself? 
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Return-to-Canada:-Release-of-the-Two-Michaels.html">
+                    <div class="info-container">
+                        <img src="image-58.png" width="100%" height="auto">
+                        <p class="topic">International</p>
+                        <div class="title">Return to Canada: Release of the Two Michaels</div>
+                        <div class="description">Despite being a seemingly simple event, the release of the Two Michaels marks a pivotal moment in a years&ndash;long tension between Canada and China, and is further complicated by the involvement of Huawei executive Meng Wanzhou.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="close_btn">
+                <a href="more-articles-world.html" target="_blank">
+                    <button class="open">More Articles</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!--Interviews-->
+    <div class="category_container" id="c">
+        Interviews
+    </div>
+    
+    <div class="container">
+        <div class="article-container">
+            <a href="https://youtu.be/zbbc5WFi_vw" target="_blank">
+                <div class="info-container">
+                    <p class="topic">POLITICS&nbsp;<i class="fa-solid fa-circle-play" style="color: red;"></i></p>
+                    <div class="title">Students Discuss 2021 Canadian Federal Election</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="https://youtu.be/YNKOuoeeVQQ" target="_blank">
+                <div class="info-container">
+                    <p class="topic">POLITICS&nbsp;<i class="fa-solid fa-circle-play" style="color: red;"></i>&nbsp;<i class="fa-solid fa-newspaper"></i></p>
+                    <div class="title">Interview with Wilson Miao, the Liberal Candidate for Richmond Centre</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="https://youtu.be/sEFQQA3JhEw" target="_blank">
+                <div class="info-container">
+                    <p class="topic">EDUCATION&nbsp;<i class="fa-solid fa-circle-play" style="color: red;"></i></p>
+                    <div class="title">How a Student Got Into UC Berkeley</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="https://youtu.be/WRlSksmiXGE" target="_blank">
+                <div class="info-container">
+                    <p class="topic">EDUCATION&nbsp;<i class="fa-solid fa-circle-play" style="color: red;"></i></p>
+                    <div class="title">How a Student Got Into Yale</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="https://youtu.be/m1dPQ_pmaeY" target="_blank">
+                <div class="info-container">
+                    <p class="topic">EDUCATION&nbsp;<i class="fa-solid fa-circle-play" style="color: red;"></i></p>
+                    <div class="title">How a Student Got Into 4 Ivy Leagues</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="https://youtu.be/DBYR0NLA0WU" target="_blank">
+                <div class="info-container">
+                    <p class="topic">EDUCATION&nbsp;<i class="fa-solid fa-circle-play" style="color: red;"></i></p>
+                    <div class="title">How BC High School Students Feel About the Quarter System Imposed by COVID&ndash;19</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/How-Canadian-High-School-Students-Feel-About-Attending-Summer-School-During-the-Pandemic.html">
+                <div class="info-container" target="_blank">
+                    <p class="topic">EDUCATION&nbsp;<i class="fa-solid fa-newspaper"></i></p>
+                    <div class="title">Canadian Students&#39; Responses to Taking Summer School During the Pandemic</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="https://youtu.be/2NCqgapp2QQ" target="_blank">
+                <div class="info-container">
+                    <p class="topic">POLITICS&nbsp;<i class="fa-solid fa-circle-play" style="color: red;"></i></p>
+                    <div class="title">Interview with Markiel Simpson: Getting Involved in Politics</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Interview-with-Saba:-How-She-is-Making-an-Impact-in-Oakville,-Ontario.html" target="_blank">
+                <div class="info-container">
+                    <p class="topic">STUDENTS&nbsp;<i class="fa-solid fa-newspaper" style="color: red;"></i></p>
+                    <div class="title">Interview with Saba: How She is Making an Impact in Oakville, Ontario</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/How-a-Student-Got-Into-Harvard.html" target="_blank">
+                <div class="info-container">
+                    <p class="topic">EDUCATION&nbsp;<i class="fa-solid fa-circle-play" style="color: red;"></i></p>
+                    <div class="title">How a Student Got Into Harvard</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="https://youtu.be/iG0riyQQIH0" target="_blank">
+                <div class="info-container">
+                    <p class="topic">STUDENTS&nbsp;<i class="fa-solid fa-circle-play" style="color: red;"></i></p>
+                    <div class="title">What Students Hope For in 2021</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Interview-with-Emily-Ni,-Team-Canada-Debater.html" target="_blank">
+                <div class="info-container">
+                    <p class="topic">STUDENTS&nbsp;<i class="fa-solid fa-circle-play" style="color: red;"></i></p>
+                    <div class="title">Interview with a Team Canada Debater</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Interview-with-the-World's-7th-Best-Student-Public-Speaker-2020.html" target="_blank">
+                <div class="info-container">
+                    <p class="topic">STUDENTS&nbsp;<i class="fa-solid fa-newspaper" style="color: red;"></i></p>
+                    <div class="title">Interview with the World&#39;s 7th Best  Student Public Speaker 2020</div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Four-Burnaby-Students-Host-an-Online-Summer-Debate-Camp.html" target="_blank">
+                <div class="info-container">
+                    <p class="topic">STUDENTS&nbsp;<i class="fa-solid fa-newspaper" style="color: red;"></i></p>
+                    <div class="title">Four Burnaby Students Host an Online Summer Debate Camp</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <!--Sports &#38; Entertainment-->
+    <div class="category_container" id="d">
+        Sports &#38; Entertainment
+    </div>
+    
+    <div class="container">
+        <div class="article-container">
+            <a href="articles/Canada-Qualifies-for-2022-FIFA-World-Cup-After-36-Years.html">
+                <div class="info-container">
+                    <img src="image-8.png" width="100%" height="auto">
+                    <p class="topic">CANADA</p>
+                    <div class="title">Canada Qualifies for 2022 FIFA World Cup After 36 Years</div>
+                    <div class="description">Canada officially claimed its place at the 2022 FIFA World Cup Qualification with a powerful 4-0 win over Jamaica, marking the team's impressive return to the world cup.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Eileen-Gu-vs.-Zhu-Yi:-Different-Stories-of-Foreign-Athletes.html">
+                <div class="info-container">
+                    <img src="image-9.png" width="100%" height="auto">
+                    <p class="topic">2022 WINTER OLYMPICS</p>
+                    <div class="title">Eileen Gu vs. Zhu Yi: Different Stories of Foreign Athletes</div>
+                    <div class="description">After China hosted the Summer Games nearly a decade and a half ago, Team China is risking long&ndash;standing geopolitical turmoil to put its best foot forward at the 2022 Beijing Olympics.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Spotlight-on-Eileen-Gu:-Incredible-Ski-Jumps-Lead-to-Winning-Olympic-Gold-at-18.html">
+                <div class="info-container">
+                    <img src="image-10.png" width="100%" height="auto">
+                    <p class="topic">2022 WINTER OLYMPICS</p>
+                    <div class="title">Spotlight on Eileen Gu: Incredible Ski Jumps Lead to Winning Olympic Gold at 18</div>
+                    <div class="description">Eileen Gu is the youngest Olympic gold medalist for freestyle skiing, earning her gold medal at the 2022 Beijing Olympics.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Politicizing-the-Olympics.html">
+                <div class="info-container">
+                    <img src="image-11.png" width="100%" height="auto">
+                    <p class="topic">2022 WINTER OLYMPICS</p>
+                    <div class="title">Politicizing the Olympics</div>
+                    <div class="description">The 2022 Beijing Winter Olympics opened Friday following a slew of political boycotts and warnings on the potential legal action that athletes could face if they speak out on contentious human rights issues.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Meet-Some-of-the-Canadian-Athletes-Competing-at-the-2022-Winter-Olympics.html">
+                <div class="info-container">
+                    <img src="image-12.png" width="100%" height="auto">
+                    <p class="topic">2022 WINTER OLYMPICS</p>
+                    <div class="title">Meet Some of the Canadian Athletes Competing at the 2022 Winter Olympics</div>
+                    <div class="description">215 Canadian athletes will compete in the 2022 Winter Olympics. British Columbia will be sending 42 athletes to the Winter Olympics.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Michael-Bublé's-Strange-Connection-to-Burnaby's-Smallest-High-School.html">
+                <div class="info-container">
+                    <img src="image-13.png" width="100%" height="auto">
+                    <p class="topic">2022 WINTER OLYMPICS</p>
+                    <div class="title">Michael Bublé&#39;s Strange Connection to Burnaby&#39;s Smallest High School</div>
+                    <div class="description">By far the smallest secondary school in the Burnaby district is Ecole Cariboo Hill Secondary School, and unlike most of its relatives it doesn&#39;t often find itself within the public eye. However, amongst the rankings of notable alumni, Cariboo Hill may find itself near the very top.
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <!--Hidden Articles-->
+        <div id="close_btn3" class="close_btn">
+            <button class="open" onclick="Open3()">More Articles</button>
+        </div>
+        
+        <script>
+            function Open3() {
+                var articles = document.getElementById("more_articles3");
+                var button = document.getElementById("close_btn3");
+                articles.style.display = "flex";
+                button.style.display = "none";
+            }
+        </script>
+        
+        <div id="more_articles3" class="more_articles" style="display:none">
+            <div class="article-container">
+                <a href="articles/Rutherford-Breathes-New-Life-Into-the-Canucks'-Front-Office.html">
+                    <div class="info-container">
+                        <img src="image-59.png" width="100%" height="auto">
+                        <p class="topic">Canucks</p>
+                        <div class="title">Rutherford Breathes New Life Into the Canucks' Front Office</div>
+                        <div class="description">Once the Aquillini family instated Jim Rutherford as the President of Hockey Operations for the Vancouver Canucks, it was only a matter of time until a new General Manager was found.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/A-Decisive-End-to-the-2021-World-Chess-Championship.html">
+                    <div class="info-container">
+                        <img src="image-60.png" width="100%" height="auto">
+                        <p class="topic">Chess</p>
+                        <div class="title">A Decisive End to the 2021 World Chess Championship</div>
+                        <div class="description">First administered in 1948 by the International Chess Federation (FIDE), the World Chess Championship is held once every two years to determine the chess champion of the world.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Jim-Benning-and-Travis-Green-Fired.html">
+                    <div class="info-container">
+                        <img src="image-61.png" width="100%" height="auto">
+                        <p class="topic">Canucks</p>
+                        <div class="title">Jim Benning and Travis Green Fired</div>
+                        <div class="description">After 8 years, Jim Benning is finally out as General Manager of the club. The gap left by Benning will be temporarily filled by Chris Gear.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/How-the-Canucks-Fandom-Has-Evolved-Online.html">
+                    <div class="info-container">
+                        <img src="image-62.png" width="100%" height="auto">
+                        <p class="topic">Canucks</p>
+                        <div class="title">How the Canucks Fandom Has Evolved Online</div>
+                        <div class="description">Although the results of the Vancouver Canucks’ first quarter of the season were extremely lackluster producing an underwhelming 6&ndash;13&ndash;2 record, fans are still finding a way to enjoy their favourite team online.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/The-Canucks-Are-3-5-1:-What-Do-They-Do-Now.html">
+                    <div class="info-container">
+                        <img src="image-63.png" width="100%" height="auto">
+                        <p class="topic">Canucks</p>
+                        <div class="title">The Canucks Are 3&ndash;5&ndash;1: What Do They Do Now?</div>
+                        <div class="description">After emerging from a record setting 6 game road trip to start off their 2021&ndash;2022 season, the Canucks have endured 3 straight losses at home. It’s clear from the perspective of someone who has watched every single one of these games, that they are in trouble.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/The-International-Chopin-Piano-Competition.htmlddd">
+                    <div class="info-container">
+                        <img src="image-64.png" width="100%" height="auto">
+                        <p class="topic">Music</p>
+                        <div class="title">The International Chopin Piano Competition</div>
+                        <div class="description">Sponsored by the government of Poland and in honour of the Polish romantic composer Frédéric Chopin, hundreds of the finest pianists from various parts of the world competed to perform in Warsaw in hopes of winning the top prize of €40,000 ($45,000 USD).
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Pettersson-and-Hughes-Signings-Cap-Off-Benning's-Aggressive-Offseason:-But-Is-It-Enough.html">
+                    <div class="info-container">
+                        <img src="image-65.png" width="100%" height="auto">
+                        <p class="topic">Canucks</p>
+                        <div class="title">Pettersson and Hughes Signings Cap Off Benning&#39;s Aggressive Offseason: But Is It Enough?</div>
+                        <div class="description">It was announced this morning that the Vancouver Canucks has locked up their two franchise players Elias Pettersson and Quinn Hughes. The announcement arrives after Canucks fans underwent a grueling offseason, waiting for a contract for both players to be inked. 
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Scarlett-Johansson-vs-Disney:-What-Students-Need-to-Know-About-Contract-Law.html">
+                    <div class="info-container">
+                        <img src="image-66.png" width="100%" height="auto">
+                        <p class="topic">Entertainment</p>
+                        <div class="title">Scarlett Johansson vs Disney: What Students Need to Know About Contract Law</div>
+                        <div class="description">Many companies that choose to hire young workers take advantage of their lack of legal knowledge. It is important that students understand the basics of contract law to protect their rights.  
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/ABBA-Reunites-After-40-Years-for-Voyage-Album.html">
+                    <div class="info-container">
+                        <img src="image-67.png" width="100%" height="auto">
+                        <p class="topic">Music</p>
+                        <div class="title">ABBA Reunites After 40 Years for Voyage Album</div>
+                        <div class="description">ABBA, a 70&#39;s Swedish pop group with hits like ‘Waterloo’ and ‘Dancing Queen’, has announced the release of their new album and a virtual concert in 2022.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="close_btn">
+                <a href="more-articles-sports-and-entertainment.html" target="_blank">
+                    <button class="open">More Articles</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!--Coronavirus-->
+    <div class="category_container" id="e">
+        Coronavirus
+    </div>
+    
+    <div class="container">
+        <div class="article-container">
+            <a href="articles/Boris-Johnson-Lifts-All-COVID-19-Restrictions-in-England.html">
+                <div class="info-container">
+                    <img src="image-14.png" width="100%" height="auto">
+                    <p class="topic">World</p>
+                    <div class="title">Boris Johnson Lifts All COVID-19 Restrictions in England</div>
+                    <div class="description">Announcing that it was time to live with the coronavirus, Prime Minister Boris Johnson declared an end to legal restrictions and most free testing.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Reliving-March-2020:-Schools-Closed-and-New-Spike-in-Cases.html">
+                <div class="info-container">
+                    <img src="image-15.png" width="100%" height="auto">
+                    <p class="topic">CANADA</p>
+                    <div class="title">Reliving March 2020: Schools Closed and New Spike in Cases</div>
+                    <div class="description">With 2022 barely getting started, people find themselves perhaps back in the same situation as March 2020. The COVID-19 pandemic is rapidly increasing at a new peak as provinces in Canada try to get a hold on the situation.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/What-You-Need-to-Know-About-the-Omicron-Variant.html">
+                <div class="info-container">
+                    <img src="image-16.png" width="100%" height="auto">
+                    <p class="topic">Omicron</p>
+                    <div class="title">What You Need to Know About the Omicron Variant</div>
+                    <div class="description">The World Health Organization issued a statement on Friday calling Omicron a “variant of concern” after the new, and potentially more transmittable, coronavirus was first identified in South Africa.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/What-You-Need-to-Know-About-the-BC-Vaccine-Card.html">
+                <div class="info-container">
+                    <img src="image-17.png" width="100%" height="auto">
+                    <p class="topic">Canada</p>
+                    <div class="title">What You Need to Know About the BC Vaccine Card</div>
+                    <div class="description">Starting from September 13, BC will require a vaccine card to access indoor events, such as indoor concerts, theatres, restaurants, student housing on campus, and nightclubs.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Global-Vaccine-Inequities-Could-Lead-to-a-Two–Track-Pandemic.html">
+                <div class="info-container">
+                    <img src="image-18.png" width="100%" height="auto">
+                    <p class="topic">World</p>
+                    <div class="title">Global Vaccine Inequities Could Lead to a Two&ndash;Track Pandemic</div>
+                    <div class="description">A two-track pandemic happens when vaccines are inequitably distributed around the world, causing high-income countries to lift restrictions while low–income countries face dangerous case counts and fatalities.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/How-Herd-Immunity-Works.html">
+                <div class="info-container">
+                    <img src="image-19.png" width="100%" height="auto">
+                    <p class="topic">WORLD</p>
+                    <div class="title">How Herd Immunity Works</div>
+                    <div class="description">Herd immunity is something individuals have been hearing a lot as vaccination against COVID&ndash;19 progresses, but what exactly does it mean?
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <!--Hidden Articles-->
+        <div id="close_btn4" class="close_btn">
+            <button class="open" onclick="Open4()">More Articles</button>
+        </div>
+        
+        <script>
+            function Open4() {
+                var articles = document.getElementById("more_articles4");
+                var button = document.getElementById("close_btn4");
+                articles.style.display = "flex";
+                button.style.display = "none";
+            }
+        </script>
+        
+        <div id="more_articles4" class="more_articles" style="display:none">
+            <div class="article-container">
+                <a href="articles/India's-COVID-19-Crisis.html">
+                    <div class="info-container">
+                        <img src="image-68.png" width="100%" height="auto">
+                        <p class="topic">World</p>
+                        <div class="title">India&#39;s COVID&ndash;19 Crisis</div>
+                        <div class="description">As of May 6, according to India&#39;s Ministry of Health and Welfare, there are about 3.6 million active cases, and 230,000 deaths. Estimates vary across sources, but India&#39;s total cases so far number about 21 million.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Covid-19-and-the-“Finish-Line”-Mentality.html">
+                    <div class="info-container">
+                        <img src="image-69.png" width="100%" height="auto">
+                        <p class="topic">Canada</p>
+                        <div class="title">COVID&ndash;19 and the &quot;Finish Line&quot; Mentality</div>
+                        <div class="description">When it was announced that a successful Covid-19 vaccine had been made at the end of 2020, everyone could see a light at the end of the tunnel. Now, in early April 2021, frustration has been increasing among Canadians at the slow vaccine rollout.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Whitehorse-Offers-COVID-19-Vaccine-to-Anyone-Aged-Eighteen-or-Older.html">
+                    <div class="info-container">
+                        <img src="image-71.png" width="100%" height="auto">
+                        <p class="topic">Canada</p>
+                        <div class="title">Whitehorse Offers COVID&ndash;19 Vaccine to Anyone Aged Eighteen or Older</div>
+                        <div class="description">Whitehorse, the capital city of Yukon, has become the first capital city in Canada to offer the COVID-19 vaccine to citizens aged eighteen or over.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Students-Protest-University-Closures-in-France.html">
+                    <div class="info-container">
+                        <img src="image-72.png" width="100%" height="auto">
+                        <p class="topic">World</p>
+                        <div class="title">Students Protest University Closures in France</div>
+                        <div class="description">Struggling French university students drew attention to the dire circumstances they are living in and called attention to the rise in suicide rates as well as financial insecurity.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/First-COVID-19-Vaccine-is-Administered-in-BC-and-Canada.html">
+                    <div class="info-container">
+                        <img src="image-73.png" width="100%" height="auto">
+                        <p class="topic">World</p>
+                        <div class="title">First COVID&ndash;19 Vaccine is Administered in BC and Canada</div>
+                        <div class="description">Known as 'V-Day', December 14 was the day when the first COVID-19 vaccines were administered in Canada. As the week progresses, all 10 provinces will soon receive 30,000 initial doses of the Pfizer-BioNTech vaccine.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/United-Kingdom-Begins-COVID-19-Vaccination-Process.html">
+                    <div class="info-container">
+                        <img src="image-74.png" width="100%" height="auto">
+                        <p class="topic">World</p>
+                        <div class="title">United Kingdom Begins COVID&ndash;19 Vaccination Process</div>
+                        <div class="description">The United Kingdom has become the first nation to begin vaccination of COVID&ndash;19 with the approved Pfizer/BioNTech vaccine.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Skiing-and-Snowboarding-During-the-Pandemic.html">
+                    <div class="info-container">
+                        <img src="image-75.png" width="100%" height="auto">
+                        <p class="topic">Canada</p>
+                        <div class="title">Skiing and Snowboarding During the Pandemic</div>
+                        <div class="description">Currently, although travel to ski resorts is not encouraged and Dr. Bonnie Henry has advised against non&ndash;essential travel, many ski resorts nevertheless remain open.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Pfizer-and-Moderna-Develop-COVID-19-Vaccine.html">
+                    <div class="info-container">
+                        <img src="image-76.png" width="100%" height="auto">
+                        <p class="topic">World</p>
+                        <div class="title">Pfizer and Moderna Develop COVID&ndash;19 Vaccine</div>
+                        <div class="description">Although the COVID&ndash;19 pandemic has left many feeling helpless and in despair, the public received good news recently: a successful COVID&ndash;19 vaccine has been produced largely due to Operation Warp Speed.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="article-container">
+                <a href="articles/Black-Friday-During-COVID-19:-What-You-Can-Expect.html">
+                    <div class="info-container">
+                        <img src="image-77.png" width="100%" height="auto">
+                        <p class="topic">World</p>
+                        <div class="title">Black Friday During COVID&ndash;19: What You Can Expect</div>
+                        <div class="description">All indoor and outdoor community and social events are suspended for the next two weeks, even if they are under 50 people. How will Black Friday be affected? 
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="close_btn">
+                <a href="more-articles-coronavirus.html" target="_blank">
+                    <button class="open">More Articles</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!--Business & Technology-->
+    <div class="category_container" id="f">
+        Business &#38; Technology
+    </div>
+    
+    <div class="container">
+        <div class="article-container">
+            <a href="articles/Elon-Musk-Buys-Twitter-for-$44-Billion.html">
+                <div class="info-container">
+                    <img src="image-20.png" width="100%" height="auto">
+                    <p class="topic">Technology</p>
+                    <div class="title">Elon Musk Buys Twitter for $44 Billion</div>
+                    <div class="description">One of the largest social media platforms, Twitter, gave a shock to the social media world last week by agreeing to sell itself to Elon Musk for $44 Billion.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Why-Facebook-Changed-its-Name.html">
+                <div class="info-container">
+                    <img src="image-21.png" width="100%" height="auto">
+                    <p class="topic">Technology</p>
+                    <div class="title">Why Facebook Changed its Name</div>
+                    <div class="description">In a massive rebranding of Facebook, Mark Zuckerberg announced that Facebook will be changing its name to Meta during the company’s Connect event on October 28, 2021.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Is-Tesla-the-Vehicle-of-the-Future.html">
+                <div class="info-container">
+                    <img src="image-22.png" width="100%" height="auto">
+                    <p class="topic">Technology</p>
+                    <div class="title">Is Tesla the Vehicle of the Future?</div>
+                    <div class="description">Featured by a driverless system and reduced carbon emission, Tesla is constructing an appealing image of future vehicles
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Bit-by-Bit,-Bitcoin-Grows.html">
+                <div class="info-container">
+                    <img src="image-23.png" width="100%" height="auto">
+                    <p class="topic">Cryptocurrency</p>
+                    <div class="title">Bit by Bit, Bitcoin Grows</div>
+                    <div class="description">Bitcoin is the first blockchain-based cryptocurrency in the world. It was invented by Satoshi Nakamoto in 2009. Bitcoin runs through an autonomous software program that is &#39;mined&#39; by people seeking bitcoin in a lottery-based system.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/What-is-'Padding'-and-How-is-it-Delaying-Your-Travel-Time.html">
+                <div class="info-container">
+                    <img src="image-24.png" width="100%" height="auto">
+                    <p class="topic">Travel</p>
+                    <div class="title">What is &#39;Padding&#39; and How is it Delaying Your Travel Time?</div>
+                    <div class="description">Flights seem to take longer and longer as years go by while the distance between airports haven't changed. For the past decade, airlines have chosen to extend their schedules instead of improving efficiency.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/First-Visible-Light-Images-Of-Venus's-Surface-Captured-From-Space.html">
+                <div class="info-container">
+                    <img src="image-31.png" width="100%" height="auto">
+                    <p class="topic">Technology</p>
+                    <div class="title">First Visible Light Images Of Venus&#39;s Surface Captured From Space</div>
+                    <div class="description">Venus is concealed beneath a thick veil of clouds, which makes it extremely hard to get visible images, but telescopes aboard NASA&#39;s Parker Solar Probe managed to capture the first visible-light images of the surface taken from space.
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <!--Environment-->
+    <div class="category_container" id="g">
+        Environment
+    </div>
+    
+    <div class="container_last">
+        <div class="article-container">
+            <a href="articles/Will-BC-See-More-Deadly-Heat-Waves-in-2022.html">
+                <div class="info-container">
+                    <img src="image-25.png" width="100%" height="auto">
+                    <p class="topic">Vancouver</p>
+                    <div class="title">Will BC See More Deadly Heat Waves in 2022?</div>
+                    <div class="description">British Columbia could get swelteringly hot this summer again. A recent report from the Farmers’ Almanac forecasts a “sizzling summer” in Western Canada by mid summer.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Catastrophic-Flooding-Destroys-Houses-and-Highways-in-BC.html">
+                <div class="info-container">
+                    <img src="image-26.png" width="100%" height="auto">
+                    <p class="topic">Vancouver</p>
+                    <div class="title">Catastrophic Flooding Destroys Houses and Highways in BC</div>
+                    <div class="description">BC remains in a state of emergency after catastrophic flooding destroyed highways, houses, and bridges in perhaps the costliest natural disaster Canada has ever seen.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Anti–logging-Protests-on-Vancouver-Island-Grow-as-More-People-are-Arrested.html">
+                <div class="info-container">
+                    <img src="image-27.png" width="100%" height="auto">
+                    <p class="topic">Vancouver</p>
+                    <div class="title">Anti&ndash;logging Protests in Vancouver Island Grow as More People are Arrested</div>
+                    <div class="description">Thanks to a photo of a massive old–growth log travelling on the back of a truck that went viral, outcry has been heard from countries as far away as Japan, Germany and Denmark, as well as the United States and across Canada.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/The-Importance-of-the-Fraser-River-Estuary.html">
+                <div class="info-container">
+                    <img src="image-28.png" width="100%" height="auto">
+                    <p class="topic">Vancouver</p>
+                    <div class="title">The Importance of the Fraser River Estuary</div>
+                    <div class="description">The Fraser River estuary is located in Delta, a city that makes up part of the greater Vancouver area, where the Fraser river meets the sea.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/What-the-Canadian-Government-Sacrifices-for-Fossil-Fuel-Subsidies.html">
+                <div class="info-container">
+                    <img src="image-29.png" width="100%" height="auto">
+                    <p class="topic">Canada</p>
+                    <div class="title">What the Canadian Government Sacrifices for Fossil Fuel Subsidies</div>
+                    <div class="description">Renewable energy is often dismissed for being too expensive compared to the economic advantages of fossil fuels. But fossil fuels may not be as profitable as they are presented.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/California-Wildfires:-Why-Wildfires-are-Becoming-More-Prevalent.html">
+                <div class="info-container">
+                    <img src="image-30.png" width="100%" height="auto">
+                    <p class="topic">U.S.</p>
+                    <div class="title">California Wildfires: Why Wildfires are Becoming More Prevalent</div>
+                    <div class="description">Firefighters work tirelessly to contain the recent wildfires in California, British Columbia, and more. The wildfires in California have been continuing for weeks, significantly affecting the local residents and regional air quality.
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="../">
+                    <img src="morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
