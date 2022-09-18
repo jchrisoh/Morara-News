@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            World
+        </div>
+        <div class="title">
+            The 73&ndash;year Royal Story of Prince Philip
+        </div>
+        <div class="author">
+            By Chris Oh | Published Apr 10, 2021 3:036 p.m. PST
+        </div>
+        <img src="../images/image-113.png" width="100%" height="auto">
+        <div class="article">
+            On the morning of April 9, Buckingham Palace announced that the Duke of Edinburgh passed away at Windsor Castle. Prince Philip died at 99. 
+<br><br>
+The flag at Buckingham Palace was lowered to half-mast to mark the duke’s death.<br><br>
+
+Husband of Queen Elizabeth II, Prince Philip has been key to the enduring monarchy in the United Kingdom. The queen described him as her “strength and stay” at the couple’s golden wedding anniversary in 1997. <br><br>
+
+<b>The Royal Love Story of Prince Philip and Queen Elizabeth</b><br>
+
+The two met when the queen was 13. At that time, she was Princess Elizabeth, and she was introduced to Philip by his uncle, Lord Louis Mountbatten. Despite an initial disapproval of Philip as he was a foreigner (he was born on the Greek island of Corfu), Philip's charisma and athletic skills added glamour to the royal family and soon later, the couple shared four children, eight grandchildren and eleven great–grandchildren.<br><br>
+
+In 1952, Elizabeth became the monarch and head–of–state at 27, and Philip, jolted into new roles, left his naval career and supported the queen and raised their family. <br><br>
+
+<b>Royal Achievements</b> <br><br>
+
+<b>The Duke of Edinburgh's Award</b><br>
+Prince Philip founded the Duke of Edinburgh youth awards program in 1956. The program allows young adults to explore and enter adulthood through activities that benefit the community. The program continues to this day and has expanded to countries like Hong Kong. <br><br>
+
+<b>Sports</b><br>
+After retiring from the game of polo in 1970, Prince Philip, as president of the International Equestrian Federation, created rules for international carriage competitions. Ever since, he has represented Britain in six international championships. <br><br>
+
+<b>Master of the Skies</b><br>
+Prince Philip was a member of the Royal Air Force and earned his Royal Air Force wings in 1953. He is also able to fly a helicopter and a private plane. <br><br>
+
+<b>Jewelry</b><br>
+Prince Philip designed a bracelet with gold, diamond, and ruby for the queen’s fifth wedding anniversary gift. <br><br>
+
+<b>Retirement</b><br>
+In May 2017, Prince Philip announced that he would be retiring, meaning that he would no longer continue his royal duties. <br><br>
+
+<b>How the Coronavirus Pandemic Affected Prince Philip</b><br>
+After being infected on February 16, the Duke of Edinburgh was hospitalized at King Edward VII’s Hospital. <br><br>
+
+During the month, he underwent a successful treatment of a heart ailment at St. Bartholomew’s Hospital. Despite being hospitalized and being impacted by the pandemic, the cause of the Duke of Edinburgh has not been announced by Buckingham Palace. <br><br>
+
+The duke’s body will lie in Windsor Castle and funerals are expected to be arranged soon.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

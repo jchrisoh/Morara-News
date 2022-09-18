@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="#b">World</a>
+        <a href="#c" id="red">Interviews</a>
+        <a href="#d">Sports &#38; Entertainment</a>
+        <a href="#e">Coronavirus</a>
+        <a href="#f">Business &#38; Technology</a>
+        <a href="#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            The Goal of High School Sports
+        </div>
+        <div class="author">
+            By Keyaan Vegdani | Published Jan 12, 2022 5:25 p.m. PST
+        </div>
+        <img src="../images/image-35.png" width="100%" height="auto">
+        <div class="article">
+            It’s fast, it’s emotional, and it’s riveting. It’s also played in an old and creaky gymnasium. <br><br>
+
+On the surface, high school sports seem like they would be a bad idea. One could argue that creating a platform for a swirling tornado of hormones to fuel inter-school rivalries is detrimental. However, to all types of students, they are a chance to build character, resilience, and a strong work-ethic. <br><br>
+
+Although he is a social studies teacher passionate about global events, Eugene Fung is also the head coach of Ecole Cariboo Hill Secondary School’s Senior Boys Soccer Club and Senior Boys Basketball team. From year to year, he sees new groups of students find their way onto the team, but he thinks talent or skill is not what makes an amateur High School athlete great; it’s mentality. <br><br>
+
+“The difference between the average player from school to school is not too big,” Fung explained. “Similar athletic ability means that mindset is what separates good from great.” Yet, unlike talent, not everyone has the innate ability to deal with the pressure and intensity of the game. <br><br>
+
+That’s why coaching is so important. Nobody knows it’s necessity as much as Fung: “We try and replicate pressure situations in which a player has to perform,” he said as he pointed to a few diagrams. “Keeping players focused and ready is a huge part of coaching.” <br><br>
+
+He admits that there have been times when competing personalities in the locker room can divide a team and leave them unfocused. To combat this, he actively searches the school for students with proven resilience, a strong work-ethic, and leadership that can unite the team. “I always look for positive voices in the room,” he emphasized. “Especially those who have a good influence.” <br><br>
+
+However, Fung’s greatest challenge as a high school coach so far has been a lack of funding. Coming from the smallest school in the Burnaby School District, Cariboo Hill has sparse resources. It has got to the point where to afford track suits for the Senior Boys Basketball team, they have to run a hot chocolate fundraiser. <br><br>
+
+“Sure, it’s difficult to spend time away from the game because we don’t have funding,” Grade 12 student Aiden Gill said. “But coming up with the fundraiser and working as a team outside of the court really brought us closer together as a group.” <br><br>
+
+It’s clear that what seemed like a disadvantage has only led to the team forming a sense of unity even before their first game of the season. <br><br>
+
+Preparing for the worst, but always pushing for the best is the mentality Fung wants to instill in his athletes. “I think that athletes coming out of a smaller school have a large chip on their shoulders,” inferred Fung. “Either they believe in the chip and succumb to outside pressures, or that they use the chip to prove to the doubters that they are better.” <br><br>
+
+With a school of only around 700 students, injury could spell the end of the season for the team. “There is a fine line between whether an athlete is injured or if they are not willing to fight through,” Fung carefully illustrated. “My hope is that our motivation and determination can make up for the lack of a larger player pool.” Fung also wants to ensure that students are aware that sometimes you shouldn’t fight through every injury, as it may worsen the effects. <br><br>
+
+Of course, developing resilience in times of adversity is essential for sports, but it's even more important in life after high school. Most of the students playing for these teams aren’t headed for the major leagues, but they can’t hide from life’s problems. <br><br>
+
+The mindset Fung is trying to foster in these students will stay with them as they continue to develop and grow into functioning adults. “I think that my job, at the end of the day, is to instill determination,” Fung explained. <br><br>
+
+From building character through learning to communicate with teammates to working hard on developing unique solutions, such as a hot chocolate fundraiser, or even persevering through injuries, it sounds like Fung’s players are ready for the biggest pitch of them all: life.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
