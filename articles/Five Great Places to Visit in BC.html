@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            Five Great Places to Visit in BC
+        </div>
+        <div class="author">
+            By Chloe E.C. | Published Aug 30, 2020 11:19 p.m. PST
+        </div>
+        <img src="../image-99.png" width="100%" height="auto">
+        <div class="article">
+            The coronavirus pandemic made travelling abroad an unviable option for most people this summer. After months spent indoors with little social interaction, people were anxious to go outside whenever possible. With travelling prohibited across provinces and countries, BC residents have been able to discover the hidden gems the province has to offer. Here are five stunning travel locations within BC that are worth visiting. <br><br>
+
+<b>1. Kettle River Provincial Park </b><br>
+
+Kettle River Recreation Park is a beautiful area in the Okanagan, east of Osoyoos. Located along a section of the historic Kettle Valley Rail Trail, the provincial park is warm and contains forests of ponderosa pine as well as welcoming small towns. Several campgrounds are located along the beautiful Kettle River, and, although cold, the water levels are usually low with a weak current during the summer. People can enjoy a hike or a bike ride along the nearby trails, or take a relaxing float or paddle down the river to the tiny town of Rock Creek. With a population of approximately 300 residents, Rock Creek offers ice cream (vegan friendly options available), delicious grilled sandwiches at the local café (vegetarian option available), and souvenirs from the historic visitor center. <br><br>
+
+<b>2. Tatlayoko Lake</b><br>
+
+Tatlayoko Lake is a gorgeous lake located by the Homathko River, in a region known as West Chilcotin. About a ten-hour drive north from Vancouver in central BC, Tatlayoko Lake is surrounded by forests, rugged mountains and ranches. Common summer activities at Tatlayoko Lake include horseback riding, hiking, and strong winds there make it an ideal spot for kiting and windsurfing. Accommodations can be found on one of the campgrounds on the lakeshore or at one of the ranches. This area has a long history where locals have countless interesting stories they are willing to share with people who visit. This area is also sparsely populated and largely unknown to tourists, making it an ideal spot to head to for peace and solitude with nature. <br><br>
+
+<b>3. Sechelt, Sunshine Coast</b><br>
+
+Sunshine Coast is a great place to visit at any time, especially now when we need to take advantage of what is nearby. Only accessible by ferry, Sunshine Coast is dotted with small towns and cities, and Sechelt is one of them. There are several beachfront motels for accommodation and campsites with views of the water surrounding Sechelt. The main town offers a variety of food options, and there is Talewind Books, an independent bookstore. Those seeking recreational entertainment can rent kayaks to explore the water, where sights of seals, starfish, and sea cucumbers are highly likely. Moreover, one can either enjoy a day trip to Catherine Lake, which is great for swimming, or take a longer drive to observe the Skookumchuck Narrows, an inlet that develops rapids when seawater is forced through at high tide. <br><br>
+
+<b>4. Pemberton</b><br>
+
+Pemberton is an adorable small town located along highway 99. It is an approximately thirty-minute drive past Whistler, but is often overlooked by travellers in favor of the well known ski town, or the wind sports hotspot city of Squamish. Located in a deep valley surrounded by mountains, one can never become tired of the wonderful view. Enjoy the friendly, small-town atmosphere and make sure to visit local businesses such as the Mount Currie Coffee Company, a café that not only buys from local producers but also offers a variety of vegan and gluten free options (make sure to try the Canadiano, an espresso with a shot of maple syrup!). For outdoor lovers, Pemberton is the perfect spot to stay, as one can explore the walking and biking trails around the town or even drive a bit further to the nearby provincial parks in the area. <br><br>
+
+<b>5. Vernon</b><br>
+
+Vernon is a small city in the Okanagan. By car, Vernon is a fifty-minute drive north from Kelowna. The city is near two large lakes, Kalamalka Lake and Lake Okanagan, both of which are great for swimming. Vernon is landlocked by mountains, including Silverstar mountain, home to a great ski resort in the winter, and ample hiking and biking trails in the summer. In the summer, Vernon’s temperatures climb high, and thus one can observe the area’s desert-like landscape. Furthermore, Vernon is abundant in fresh fruit, which can be anticipated by the driver, as the road to Vernon is dotted with fruit stands and other great Okanagan towns where you can stop and stretch your legs. <br><br>
+
+<b>Students' Perspectives</b><br>
+
+For youth, spending time outdoors with family and friends is absolutely crucial. Especially in a pandemic, which makes it difficult for the majority of students to travel, it is useful to find new places to visit and engage in outdoor activities. Staying indoors may seem like the more comfortable option, but lack of movement can be damaging to one’s mental and physical health in the long term. As a result, it is valuable to spend time outdoors with one’s friends and family for an entertaining and safe time.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

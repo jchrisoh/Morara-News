@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            How an Unclosed AP World History Live Chat Formed Study Bubbly
+        </div>
+        <div class="author">
+            By Ashley Manalo | Published Dec 8, 2020 9:52 p.m. PST
+        </div>
+        <img src="../image-91.png" width="100%" height="auto">
+        <div class="article">
+            <b>The Beginning </b><br>
+
+It was March 2020, the beginning of the COVID-19 pandemic. Schools all around the nation started to shut down in-person classes, leaving students in their own anxieties about their studies. This especially applied to students using the College Board’s services, as it was soon to approach testing season with AP and SAT exams. SAT exams were cancelled; however, AP exams were planned to continue. To allow this to happen, the College Board released many live lessons on their youtube channel. Thousands of students were on these lessons every single day. <br><br>
+
+<b>An Accident </b><br>
+
+On one fateful day, the College Board left the AP World History live chat open. This caused many students to start chatting, and quickly a discord server was made by Mark Khalfin and Alan Wang; it was a chance for isolated students to begin studying together. Over the few months leading up to the May exam, students helped each other by answering questions, sharing resources, and getting peer feedback on DBQs. This learning environment was beneficial to all students; some reviewed better by getting criticism, while others polished DBQ writing skills by grading and looking at other examples.<br><br> 
+
+<b>Study Session </b><br>
+
+The main student DBQ editors consisted of the following: Ashley Manalo, Alan Wang, Silvia Martinez, Kaitlyn Goretski, and Vincent Yang. Many of those students were up late at night scoring practice DBQs, sometimes as late as 1 am, to accommodate students in different time zones, such as friends from Vietnam and Britain. Other forms of review offered were personalized discord livestreams, where the editors would show a few SAQs and go over DBQ skills with students over certain units. It was a lot of work, but it proved to be rewarding. From all those months spent studying, students felt prepared on the day of the AP exam. Once that gruesome 50 minutes testing period was over, students joined back in the chat to celebrate. That left the question: What’s next? <br><br>
+
+<b>Moving Forward </b><br>
+
+Student DBQ editor Vincent Yang presented an idea to the other editors: a new organization. He saw the potential of the editors, as many were passionate in helping others, and he took that enthusiasm and gave a new opportunity to the editors to continue this mission of helping students. This organization would allow for students to teach students; it would be a peer tutor type environment. Free resources such as notes, podcasts, and videos would be provided, as well as live tutor help with answering questions. It was new, and quite frankly risky, but after months of becoming close friends, the editors jumped into this new adventure. 
+<br><br>
+<b>The Organization </b><br>
+
+As the students started to form this new organization, there were many challenges, one of them being name changes. From names such as AP Hub to College Prep Student Bubble, the final name given to this organization was Study Bubbly. With this organization, a board was established. This included the following members: Vincent Yang, Kaitlyn Goretski, Silvia Martinez, Josh Ding, Mark Khalfin, Alan Wang, and Ashley Manalo. From there these students worked in various fields to grow this organization. The main field worked on was their own studies; many of the board members used Khan Academy to self study some of their AP classes over the course of summer, creating podcasts and notes to jumpstart the organization’s resources. Other jobs included recruiting staff members, doing social promotions, and working online to develop a website. Positions available in the organization include tutors, audio/video editors, social promoters, and creative content creators. With the ever-growing team, the organization was able to become a useful tool for all students. <br><br>
+
+<b>Study Bubbly </b><br>
+
+Study Bubbly is a student-based organization targeted towards high schoolers taking AP classes. The resources available on their site is to help enhance student learning, as well as motivate their peers to study and strengthen their understanding of the subject they are studying. By coming onto the site, students will be able to access many free resources and access other platforms like Discord to gain more personalized help. Study Bubbly will continue their mission to keep providing free help and cater to students to the best of their abilities. As Study Bubbly will encourage their members, "Study Smart. Tutor Together. Excel Exams." <br><br>
+
+<b>Where to Reach Study Bubbly </b><br>
+
+Website: https://studybubbly.wixsite.com/bubbly <br>
+Email: cpstudentbubble@gmail.com <br>
+Linktree: linktr.ee/studybubbly
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

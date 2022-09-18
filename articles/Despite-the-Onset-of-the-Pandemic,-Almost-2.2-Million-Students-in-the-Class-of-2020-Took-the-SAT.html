@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            Despite the Onset of the Pandemic, Almost 2.2 Million Students in the Class of 2020 Took the SAT
+        </div>
+        <div class="author">
+            By Chris Oh | Published Nov 2, 2020 1:02 a.m. PST
+        </div>
+        <img src="../image-93.png" width="100%" height="auto">
+        <div class="article">
+Despite the abrupt changes brought by the coronavirus pandemic, nearly 2.2 million students in the class of 2020 wrote the SAT. Surprisingly, this number is quite similar to the number of students in the class of 2020 who took the SAT in 2019, which was over 2.2 million. <br><br>
+
+<b>Statistics</b><br>
+
+In 2020 out of the 2.2 million students, approximately 1.1 million students took the SAT exam on a school day. According to the College Board, that is an increase compared to the 1 million students who took SAT exams on a school day in 2019. <br><br>
+
+On the other hand, the average SAT score among the class of 2020 is slightly lower compared to that of the class of 2019. The class of 2020 had an average score of 1051, whereas the class of 2019 had an average score of 1059. 
+<br><br>
+As universities began to make changes to their admission criteria, an overwhelming number of students were still able to secure a seat for their SAT exams before the coronavirus caused shutdowns around the world. The virus led to exams being canceled in the spring and summer of 2020 and is likely to cause further disruption and confusion to the class of 2021. For example, in Canada there were about 31 test centers that closed in the month of October, preventing students from taking their SATs or SAT Subject Tests. <br><br>
+
+"Guided by the expertise of public health officials, we are working with schools and communities to safely administer the SAT where possible and give members of the class of 2021, who have faced unprecedented disruption, the same opportunities," said Priscilla Rodriguez, VP, College Readiness Assessments. <br><br>
+In the fall of 2020, test administrations are slowly opening, and students who were unable to take their exams early are quickly signing up for a seat. As a result, test centers tend to be full and some students miss the chance to take their exams in the fall not because of the pandemic, but because of a significant increase in the number of students signing up. <br><br>
+
+Nevertheless, the SATs and the ACTs will most likely survive the coronavirus pandemic due to eager and passionate students. In fact, similar to how the statistics between 2020 and 2019 do not differ drastically, students in the class of 2021 are most likely going to work equally as hard in order to maximize their chances of being admitted to the university of their dreams. Moreover, although some colleges begin to stop requiring tests for admission, millions of anxious students are still continuing to sign up for their SATs and ACTs with the firm belief that test scores are the key to being accepted. Furthermore, the students who have been preparing for several years for these exams are unlikely to throw away their years of effort due to the pandemic. <br><br>
+
+<b>Students' Perspectives</b><br>
+
+Although the public does not know how long the pandemic and its consequences will last, many universities will try to be flexible with applicants who have not had the chance to take their exams, tested late, or tested only once. In the meantime, it is best for students to focus on their school grades in order to achieve competitive GPAs and spend time on other activities that they enjoy. <br><br>
+
+It is important to understand that although test scores are an important factor that plays a role in the admissions process, students should place their safety as their utmost priority. When test scores come at the expense of one’s safety, one may suffer long term consequences due to poor health. Therefore, it is crucial to make the decision that is best for oneself.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

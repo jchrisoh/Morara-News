@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            American or Canadian Universities: Finding What is Best for You
+        </div>
+        <div class="author">
+            By Holly Li | Published Aug 7, 2020 3:37 p.m. PST
+        </div>
+        <img src="../image-96.png" width="100%" height="auto">
+        <div class="article">
+            Due to the proximity of the geographical locations of Canada and the U.S., tens of thousands of Canadian students choose to study in American universities every year to experience a different educational environment and education system. <br><br>
+
+<b>How are American Colleges Different from Canadian Colleges?</b><br><br>
+
+<b>1. Tuition </b><br>
+American colleges have a reputation of being expensive. Is it true? If you are a Canadian citizen, the average cost of attending a domestic university is CA $6,463 per year. However, according to a report by the College Board, if a student studies at an American public college as an international student, the average cost of a four-year program is approximately USD $20,404. Furthermore, the tuition fees of private Ivy League universities are significantly higher than the number listed above. Although the tuition fees of attending college depends on the geographic location of the university, it is evident that American colleges are generally more expensive than Canadian colleges. Generally, Canadians, and international students, applying to universities in the United States face higher tuition fees than domestic students. <br><br>
+
+<b>2. Admission</b><br>
+In the vast majority of cases, admission to Canadian universities largely depends on a student’s academic performance, such as the student’s GPA. Canadian universities also tend to primarily focus on a student’s junior and senior school report. For example, the University of British Columbia (UBC) requires applicants to meet general requirements concerning students’ GPA and academic record, while offering students to share their personal experiences through the Student Profile. In the United States, however, the admission criteria is slightly different. Most U.S. universities evaluate a student’s standardized test scores as part of the admission process. Nevertheless, universities in either country consider extracurricular activities and reference letters as part of admission criteria. <br><br>
+
+<b>The Advantages and Disadvantages of American Universities</b> <br><br>
+
+<b>Advantages:</b> <br>
+
+<b>1. Diverse Programs</b><br>
+In America, neighbouring universities collaborate frequently to provide impressive and unique programs for students. For example, Wellesley will allow students to cross-register courses at the Massachusetts Institute of Technology (MIT) if required prerequisites are met. University students as well as professors in the United States are able to access books from libraries at various universities. Many universities also offer exchange programs, allowing students to study in different nations. <br><br>
+
+<b>2. Work Opportunities</b><br>
+In America, there are a variety of firms that are keen to recruit students. Sometimes, firms such as law firms recruit students on campus during summer breaks. Students can benefit from being able to access various internships and work opportunities by experiencing life in the workforce. <br><br>
+
+<b>The Disadvantages</b> <br>
+
+<b>1. The Competitive Application Process </b><br>
+A great number of students from different countries apply to U.S. universities every year; thus, the application pool is highly competitive. The admission rate of Harvard, one of the highest-ranking universities, is around 5%. In 2019, Harvard University admitted 2,009 of 43,330 students, yielding an admission rate of 4.6%. On the other hand, the admission rates of reputable Canadian universities such as McGill and UBC are around 45% to 50%, respectively. <br><br>
+
+<b>2. Rising Costs</b><br>
+The costs of American colleges have been rising almost every year. In addition, international students oftentimes face stricter rules when applying for financial aid in some U.S. universities. International students are not eligible for U.S. federal aid. Not being a U.S. citizen means that most international students opt to apply for scholarships and enrol in programs that could potentially ease their financial burdens. <br><br>
+
+Regardless of where a student goes for university, there are different universities that specialize in different fields such as liberal art colleges and military academies. To help students decide what is best for their individual needs, it is important to identify important differences.<br><br> 
+
+How are Universities, Liberal Art Colleges, and Military Academies Different from Each Other? <br><br>
+
+<b>Liberal Art Colleges</b><br>
+Compared to other universities, liberal art colleges provide a more expansive and traditional education. Such colleges usually include both undergraduate and graduate schools. Students who have graduated from liberal art colleges often choose to go to graduate schools such as law school and medical school. <br><br>
+
+<b>Military Academies </b><br>
+Military academies offer a combination of military instruction and higher education. Graduates from military academies usually need to attend mandatory active services. In return, boarding and tuition fees are fully paid by the academy. In order to apply to such academies, you need a letter of recommendation from officials recognized by the U.S. Defense Attaché Office at a local American Embassy. <br><br>
+
+<b>What are the Requirements for Applying to Post Secondary institutions in the States?</b> <br><br>
+
+<b>1. Standardized Test Scores </b><br>
+Standardized tests, such as the SAT, ACT, or TOEFL, are required by most colleges in the United States. It is suggested that you visit the websites of the colleges to learn the standardized test requirements for applications. <br><br>
+
+<b>2. Personal Essay </b><br>
+An essay describing your character and identity is generally required for the admission committee to understand what type of person an applicant is. A great essay helps the application tremendously, as being able to convey one’s passion and attractive personality through writing can boost your application as well as help the admissions officer imagine what a student is like in real life. As a result, it is worthwhile to think of a unique essay topic ahead of time to effectively showcase one’s passions and separate oneself from other applicants. <br><br>
+
+<b>Students' Perspectives</b><br>
+
+For high school students, university is an important next step in their lives and deciding which university to attend is an important decision that cannot be taken lightly. For students considering different universities in Canada, America or even other nations across the world, it is important to identify unique advantages and disadvantages of every school. Thus, it is beneficial for students to do research on universities before making a decision that will change one’s life.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

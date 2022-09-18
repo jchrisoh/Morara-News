@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            5 Must-Read Books to Enjoy
+        </div>
+        <div class="author">
+            By Chloe E.C. | Published Dec 17, 2020 10:06 p.m. PST
+        </div>
+        <img src="../image-104.png" width="100%" height="auto">
+        <div class="article">
+            Reading is a timeless pursuit for everyone to enjoy, and exploring the worlds authors have created for us can be scary, relaxing, exciting and much more. The books listed below are five must-reads for the remainder of the holidays. <br><br>
+
+<b><i>Little Fires Everywhere, by Celeste Ng</i></b><br>
+The main storyline of Little Fires Everywhere follows two very different families. Elena Richardson, journalist and longtime resident in the Utopian neighbourhood of Shaker Heights, rents out her second home to a mother and her daughter. The two families become closely intertwined, between both the parents and their children, and begin to weave a complicated web of events. The author introduces many important and controversial topics such as class, motherhood, adoption rights, child custody, and friendship. The book has also been adapted into a TV series available on Hulu and Prime. <br><br>
+
+<b><i>The Chain, by Adrian McKinty</i></b> <br>
+The Chain is an adult fiction thriller that you will not be able to put down. It is a parent’s nightmare to become a part of The Chain, because it means that someone has kidnapped your child, and the only way to get them back is to kidnap another. Anonymous criminals communicating instructions to their victims through the dark web and burner phones watch the whole endeavor closely. Once you are on The Chain, every decision you make must be careful and calculated, and a screw-up means the death of your family, and those linked above and below you. This modern thriller is essential for readers who want to be scared. <br><br>
+
+<b><i>Hyperbole and a Half, by Allie Brosh</i></b><br>
+Allie Brosh is the creator of the hilarious blog Hyperbole and a Half, where she posts comics with a simple art style to tell stories or share her thoughts. The blog became so popular that a book was published as a collection of her best comics. The stories, art, and writing are all very funny and guarantee to have you laughing out loud. This year, a sequel to the original book came out: Solutions and Other Problems, which is also a must-read. If you do not feel like buying the book, it is easy to access the blog where you can find plenty of stories that are not in the book; just know that there are many original stories from the two books that you do not want to miss out on. <br><br>
+
+<b><i>The Girl in Red, by Christina Henry</i></b><br>
+The Girl in Red is a great book to read in 2020, because it ties well into the pandemic theme, but is in a way comforting to read because the state of this fictional world is much worse than the real one. This modern twist on the classic fairytale Little Red Riding Hood is about a young girl who calls herself Red, fleeing from a virus that has devastated North America and brought out the worst of humankind. Desperate not to be caught and taken to a quarantine camp, a breeding ground for disease, she travels through the woods to reach the remote log cabin where her grandmother lives. The book moves between the present and the past to fill in the details of why everything went wrong. The writing is captivating, but the best part is that Red herself is a tough, strong, independent woman who can survive on her own because of her wits and sharp thinking. It is inspiring to see this from a woman protagonist, and sets a much better example for young children than the original Red Riding Hood. <br><br>
+
+<b><i>Where'd You Go Bernadette, by Maria Semple</i></b><br>
+This story is about a middle-aged woman who was once a promising young architect, but is currently hiding from the world after a failed project left her in disgrace. She tries to plan a cruise to Antarctica for her teenage daughter, Bee, but after spending years trapped in the life she never wanted and on the brink of a nervous breakdown, a chain of disastrous events occurs. When it all becomes too much, Bernadette flees from her family and Bee takes it on herself to set out and find her. The writing style takes some getting used to, because it is told through a series of emails and documents with the occasional narration from Bee. However, the novel is funny, poignant and very original. It highlights the importance of putting effort into yourself as well as others, and the dangers of letting mental health problems go unchecked. A very good movie adaption has also been made, and is available on Prime.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

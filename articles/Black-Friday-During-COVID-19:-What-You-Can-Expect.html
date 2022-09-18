@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Coronavirus
+        </div>
+        <div class="title">
+            Black Friday During COVID&ndash;19: What You Can Expect
+        </div>
+        <div class="author">
+            By Holly Li | Published Nov 25, 2020 10:54 p.m. PST
+        </div>
+        <img src="../image-77.png" width="100%" height="auto">
+        <div class="article">
+            Black Friday of 2020 takes place on Nov 27, the fourth Friday of November. In the past years, numerous people would line up in front of shops at midnight to purchase their desired items. However, due to the increase in coronavirus cases, B.C. has announced a mask mandate and a temporary social lockdown for the entire province. According to the announcement, all indoor and outdoor community and social events are suspended for the next two weeks, even if they are under 50 people. How will Black Friday be affected? <br><br>
+
+<b>How Will This Year's Black Friday be Different From Past Years? </b><br>
+
+Under such restrictions, one might wonder: is Black Friday cancelled this year? The answer is no. However, retailers are making adjustments to accommodate the COVID-19 restrictions. 
+<br><br>
+Difference 1: Online shopping is encouraged, as retailers are opting for more online deals rather than traditional, physical shopping. <br><br>
+
+Many stores are closed due to the pandemic, while those opening ones have safety protocols in place and limits on how many people will be allowed in the building at once. These factors make physical shopping less convenient and satisfying than shopping in the past years. Online shopping can be an alternative. <br><br>
+
+Difference 2: Deals start earlier this year and last for long duration than those in past years. <br><br>
+
+Due to increased demand of online shopping, businesses struggle to keep up with the surges of deliveries. Worse, because the air passenger traffic globally is down by more than 70 per cent compared to pre-pandemic times, delivering the packages from warehouses to consumers’ doorsteps become a headache for the businesses. To cope with the problem, retailers start to release early deals to alleviate the stress of commodity deliveries. Stores like Amazon have started the Black Friday discount since the start of November. Consumers are encouraged to shop early since the out-of-stock items or late packages will become potential problems of late purchases. <br><br>
+
+<b>Pros and Cons of Online Shopping</b> <br>
+
+<b>Pros</b>: <br>
+
+1. Lower Prices: Because many consumers are switching to online shopping, there will be more competing prices. If a consumer has already purchased a commodity and finds that the same commodity has a lower price on another website, he or she will likely return the first item and buy the cheaper one. In addition, due to the closure of many stores, fixed costs such as rent and workers’ wages can be eliminated, allowing sellers to offer lower prices on the websites. <br><br>
+
+2. Lower Risks: Lining up in the crowds is an especially risky decision since the stores are potential incubators of the coronavirus. Shopping online reduces the risks of contact with a mass number of strangers. <br><br>
+
+<b>Cons</b>: <br>
+
+1. Slower Delivery: Delivery is slower than usual during the holiday season due to an increased number of orders. It is not uncommon to wait for a month for an item. Overseas shipping might take longer time. <br><br>
+
+<b>What Does This Mean to Retailers? </b><br>
+
+Retailers, especially small or independent ones, might suffer a loss of revenue due to the lock down. During the spring lockdown, small retailers already suffered a 20 per cent drop in revenue on average. Seeking a method to resolve the problem caused by the seemingly endless pandemic will be a challenge for the retailers. <br><br>
+
+<b>Students' Perspectives </b><br>
+
+If one wants to shop in person on Black Friday, masks and socially distancing will be mandatory. Otherwise, one might not be able to enter a store. Moreover, students are encouraged to shop online rather than offline. A lot of deals and promotion codes can be easily found online, which makes the shopping experience easier and more efficient. Furthermore, when unwrapping your packages, do not forget to sanitize it because the coronavirus can live for hours to days on surfaces like countertops and doorknobs.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
