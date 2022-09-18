@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            What You Need to Know About British Universities
+        </div>
+        <div class="author">
+            By Holly Li | Published Sep 8, 2020 11:23 p.m. PST
+        </div>
+        <img src="../image-95.png" width="100%" height="auto">
+        <div class="article">
+            The United Kingdom is home to many prestigious universities. Additionally, while Canadian and British Universities have a lot of similarities in their academic projects, the differences are salient. Therefore, as high school students, it is beneficial to examine the characteristics of both college systems before making your choice on which college system suits you the most.<br><br> 
+
+<b>Oxford University</b><br>
+History: The university of Oxford was established in 1096, making it the oldest university in the English-speaking countries. It has a very complex background of British religious and political history. <br><br>
+
+<b>Annual Tuition: </b><br>
+For UK/EU undergraduates: £9,250 (~$12,160) <br>
+For non-EU undergraduates: £25,740 - £36,065 (~$32,375 - 45,360) <br><br>
+
+<b>Cambridge University</b><br>
+History: Cambridge University was established in 1209 which makes it the second-oldest university in UK. The university was established by the scholars who left the university of Oxford after a dispute. <br><br>
+
+<b>Annual Tuition: </b><br>
+For UK/EU undergraduates: &163;9,250 (~$12,160) <br>
+For non-EU undergraduates: &163;22,227 - &163;58,038 (~$27,970 - 74,280) <br><br>
+
+<b>Imperial College London</b><br>
+History: Imperial College is established in 1907. It is a public research university located in London. It is one of the most selective universities in UK. <br><br>
+
+<b>Annual Tuition: </b><br>
+Varies depending on the course <br><br>
+
+<b>Characteristics of British Colleges</b><br>
+
+<b>&#8226; Less Time</b><br>
+
+Normally, it takes a student 4 to 5 years to obtain a bachelor degree in a Canadian university. In comparison, British universities grant a BA degree to students with 3 years of studies. In addition, it only takes about 7 years for a student to complete bachelor, master, and PhD degrees in a British university; meanwhile, it is common for a student in Canada or US to spend a lot more time to obtain these degrees. <br><br>
+
+<b>&#8226; Constituent College</b><br>
+
+Oxford and Cambridge are known for their constituent college system. Cambridge, for example, is made up of more than 30 constituent colleges. Each of the constituent colleges is independent from each other and can be considered as a different college. Within each constituent college, there are students' and faculties' dorms, libraries, instructional classrooms, offices, entertainments, etc. Each constituent college is responsible for managing itself, and the university is not able to interfere with such a task. In order to attend such a university, students need to apply not only for the university, but also for the different colleges within the university. As a result, students should consider the strengths and environment of each constituent college before applying to these types of universities. <br><br>
+
+<b>&#8226; Admissions</b><br>
+
+The completion of harder courses such as AL and IB is a helpful way to demonstrate a student's academic abilities. Furthermore, some universities might require admission tests such as the ELAT. In some cases, interviews are also a mandatory aspect of the admissions process. Interviews can be in person or virtual. The purpose of interviews is to evaluate a students’ knowledge and problem-solving abilities. As admission processes vary for each university, it is suggested to visit the university’s website to find its admission criteria. <br><br>
+
+<b>Students' Perspectives</b><br>
+
+Overall, most British universities have prestigious backgrounds and offer similar qualities of education. Thus, learning about a university’s history, strengths, and values can definitely aid students during their decision making process. Another factor in comparing British universities and American or Canadian universities is money. Because British universities typically have shorter lengths of time required to obtain an academic degree, attending British universities can be less costly. Nevertheless, it is important for students to inquire specifically for each individual university to be certain of a university’s admission criteria.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

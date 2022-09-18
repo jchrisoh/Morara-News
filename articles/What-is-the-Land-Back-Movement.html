@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            World
+        </div>
+        <div class="title">
+            What is the Land Back Movement?
+        </div>
+        <div class="author">
+            By Lily Nordgren | Published Feb 23, 2021 1:07 p.m. PST
+        </div>
+        <img src="../image-114.png" width="100%" height="auto">
+        <div class="article">
+            In British Columbia, the Coastal GasLink Pipeline has brought local attention to the phrase "Land Back". Wet'suwet'en land defenders set up blockades and demonstrated to prevent the pipeline from being constructed on their territory. In the November 2020 Globe and Mail article "'Land Back' is more than a slogan for a resurgent Indigenous movement", Kanahus Manuel and Naomi Klein pointed out that "Land Back" has been echoed all over Canada; in Nova Scotia by Mi'kmaq fishermen facing violence from white fishermen, in Ontario by Haudenosaunee peoples fighting a housing development on their territory, and in B.C. against the Coastal GasLink pipeline. <br><br>
+
+According to a 4Rs Youth Movement article, "Land Back! What do we mean?", written by Ronald Gamblin, "Land Back" has a few different meanings. It defines the physical transfer of land to Indigenous peoples, the protection and reclamation of land, and self-governance for Indigenous nations. "Land Back" fights against the oppression of colonial structures like residential schools, forced relocation, and attempted assimilation. Gamblin recommends that non–Indigenous people hold conversations among themselves about the impacts of colonialism, actively unlearn colonial perceptions of history, learn about Indigenous culture and history, and support Indigenous peoples without guilt or defensiveness. <br><br>
+
+Here are a few resources to learn more: <br><br>
+
+"Land Back, A Yellowhead Institute Red Paper" outlines the history and ongoing problem of unceded territories, as well as the demands of "Land Back": <br>
+https://redpaper.yellowheadinstitute.org/?fbclid=IwAR3SMYCfLkraIoXNrdf5hvFuJz2sah0H46SQmcf0_l6pjJXTUJEVycNIdpA<br><br>
+
+The "Idle No More" organization offers resources and education about Indigenous history, art, and current issues: <br>
+https://idlenomore.ca/resources-education/ <br><br>
+
+"Land Back" is a website with lists of events, a manifesto detailing the purpose of "Land Back", and Hesapa, a film created by the NDN Collective about the defense of Lakota land: <br>
+https://landback.org/ <br><br>
+
+"Native Land" is a map of the world showing Indigenous nations and their territories. Type in your city or area, and find out more about the land you exist on. <br>
+https://native-land.ca/ <br><br>
+
+Land negotiations and discussions between Indigenous nations and the Canadian government are often met with criticism. As outlined in a January 2019 Global News article by Maham Abedi, "Band councils, hereditary chiefs - here's what to know about Indigenous governance", Indigenous governance is often structured differently than federal governance. Hereditary chiefs are recognized as community leaders within Indigenous nations. Band councils were created by the Indian Act, and are elected councils that serve to administrate federal funding. The decisions of hereditary chiefs and of band councils will not necessarily align, especially on a topic with as much uncertainty and trauma as unceded land. <br><br>
+
+The Wet'suwet'en nation and Coastal GasLink pipeline issue highlighted the complexity in governance over Indigenous land. In the March 2020 Global News article by Hina Alam, "Wet'suwet'en pipeline supporters say their message is not being heard", Alam wrote that there were conflicting decisions between hereditary chiefs and band councils. Chief Na'moks of the Tsayu Clan, who spoke to Global News, said that Wet'suwet'en people who support the pipeline should have a "right to express themselves". Chief Na'moks opposes the pipeline, but says that Indigenous peoples have thousands of years of experience governing the land, and decisions about the future must be made together. Some Wet'suwet'en people support the pipeline for economic reasons, and hope that the resources will be beneficial. Differing opinions aside, authority and rights over unceded land legally goes to Indigenous people. <br><br>
+
+"Land Back" covers many meanings, and will need to be defined differently in specific circumstances. The movement has raised questions of power, of authority, and of decolonization. The answers require a shift in our understanding of land and its ownership.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

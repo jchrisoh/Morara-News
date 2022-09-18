@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Coronavirus
+        </div>
+        <div class="title">
+            What You Need to Know About the BC Vaccine Card
+        </div>
+        <div class="author">
+            By Holly Li | Published Sep 15, 2021 6:08 p.m. PST
+        </div>
+        <img src="../image-17.png" width="100%" height="auto">
+        <div class="article">
+            Starting from September 13, BC will require a vaccine card to access indoor events, such as indoor concerts, theatres, restaurants, student housing on campus, and nightclubs. Grocery stores, fast-food restaurants, and cafeterias are not included in the requirement, as they are not reported to have high levels of virus transmission. Adults need to show their vaccine cards as well as their personal IDs to enter the above indoor locations. This measure is in place until Jan. 31, 2022 to mitigate the fourth wave of COVID-19. <br><br>
+
+The BC vaccine card will show whether an individual is partially or fully vaccinated, and businesses will be able to check by scanning a QR code. As of September 13, 2021, one dose of the coronavirus vaccine will be required for entry to these settings. By October 24, 2021, entry to these settings will require people to be fully vaccinated with two doses of COVID-19 vaccine. Visitors from other provinces and foreign countries also need to show the vaccination record. <br><br>
+
+<b>Where is the vaccine card not required?</b><br>
+In BC, the vaccine card will not be required in grocery stores, liquor stores, libraries, transit, salons, banks, hotels and pharmacies. Events at K-12 schools, religious institutions, and children under 12 are not subject to this requirement either. <br><br>
+
+<b>How do I get my vaccine card?</b><br>
+People can get their BC Vaccine Card online at gov.bc.ca/vaccinecard. People will need to enter their personal health number, date of birth, and date of vaccination. <br><br>
+
+The BC Vaccine Card can be saved digitally on one’s cell phone or printed as a physical copy. However, the website has experienced crashes during peak hours. If that happens, it is recommended to try again outside of peak hours. <br><br>
+
+<b>What are the penalties for violation?</b><br>
+Individuals might receive a fine from $230 to $575, while business operators may need to pay $2,300. <br><br>
+
+<b>What are the potential advantages and setbacks?</b><br>
+Some people support the BC Vaccine Card policy since it might restrict the spread of COVID-19 in places of high risk. On the other hand, others call it a discrimination toward people in poverty who are unable to obtain a legal ID.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

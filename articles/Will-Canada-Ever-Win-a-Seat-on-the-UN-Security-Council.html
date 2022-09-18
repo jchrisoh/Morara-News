@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            World
+        </div>
+        <div class="title">
+            Will Canada Ever Win a Seat on the UN Security Council?
+        </div>
+        <div class="author">
+            By Sean Oh | Published Jul 21, 2020 7:05 p.m. PST
+        </div>
+        <img src="../image-118.png" width="100%" height="auto">
+        <div class="article">
+            On June 17th, 2020, Canada lost its bid for a seat at the United Nations Security Council to Norway and Ireland. The loss was an unfortunate defeat for Justin Trudeau, who has previously pledged for Canada to take on a bigger role in the international community and has expressed a desire for Canada to exert greater influence globally. This is not Canada’s first attempt at gaining a seat on the Security Council; Canada had also attempted a bid in 2010 under a conservative government run by former Prime Minister Stephen Harper. So what exactly went wrong again? <br><br>
+
+<b>International Contribution</b><br> 
+
+The Security Council's primary role in the global stage is to ensure that devastating conflicts do not arise and that peace and security is maintained internationally. The Security Council accomplishes its role through a variety of ways such as peacekeeping missions, appointing special envoys, or establishing amiable diplomatic relationships among states. <br><br>
+
+With Canada's bold announcement of its candidacy for one of two rotating seats on the Security Council as well as a massive campaign to earn the approval of multiple member states, it became apparent that the international community did not view Canada in the most positive light. Considering the United Nations Security Council’s purpose globally, Canada's candidacy is comparatively weaker than European rivals when Canada has increasingly contributed less to the peacekeeping missions of the United Nations and has significantly decreased the aid it provides to developing countries.<br><br> 
+
+Canada's lackluster performance on the international stage to provide relief and support to countries struggling with conflict is largely to blame for Canada being unable to secure the 128 votes necessary to earn a seat on the Security Council. Compared to Norway and Ireland who received 130 votes and 128 votes, respectively, Canada received 108 votes which was comparatively worse than the 114 votes Canada received in 2010 under Former Prime Minister Stephen Harper. <br><br>
+
+<b>Multilateral Commitments</b><br>
+
+However, Canada still has important traits that make it a promising candidate and potential member state. Canada could have provided unique benefits to the Security Council if it had been accepted. It is important to note that Canada has both a greater population and larger economy than both Norway and Ireland combined. <br><br>
+
+Historically, Canada has shown immense strength and leadership on the international stage which hints to what Canada is capable of achieving in the future as a member state of the Security Council. This looks like Canada initiating the very first United Nations peacekeeping mission to resolve the Suez Crisis under the leadership of Lester Pearson, a Canadian Prime Minister who won the Nobel Peace Prize in 1957. Canada is even one of the founders of the G20 Group, which includes countries across the globe with a strong and growing economy. Canada has shown tremendous leadership in hosting an international conference that led to the creation of the Montreal Protocol, an international agreement that aimed to protect the ozone layer.<br><br> 
+
+Canada has previously shown its capacity to lead the international community and the positive influence it can have on the global community. It is crucial for Canada's future that other states are reminded of the prominent roles Canada has undertaken in the past and that Canada continues to make an effort to show similar or growing levels of leadership and contribution to the global community. <br><br>
+
+<b>Students' Perspectives</b><br>
+
+In a society that is becoming increasingly global in nature, it is important for students to learn about international relations as well as Canada's bid for a seat on the Security Council which demonstrates what countries currently value the most and, specifically, what the Security Council values in its member states. A state’s economy and population is considerably less important than one's willingness to contribute to peacekeeping missions. Canada provides a wonderful example to students of how one must continuously show improvement and how public interaction between different people can be critical in being able to access a variety of rare and valuable opportunities.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
