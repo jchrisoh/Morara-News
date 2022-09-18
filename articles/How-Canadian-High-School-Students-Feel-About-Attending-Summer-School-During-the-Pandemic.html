@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Interviews
+        </div>
+        <div class="title">
+            How Canadian High School Students Feel About Attending Summer School During the Pandemic
+        </div>
+        <div class="author">
+            By Chris and Sean Oh | Published Aug 18, 2021 3:51 p.m. PST
+        </div>
+        <div class="article">
+            <br>
+            During the summer of 2021, many students in Canada attended summer school. According to our past polls, approximately 50% of students did not enjoy summer school and we wanted to learn if attending summer school during the pandemic was any different. We interviewed and received statements from students across Canada to hear the experience that students had while in summer school during the pandemic. <br><br>
+
+   <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;It. Was. So. Hard. It was exhausting and draining, and I thought of dropping the course multiple times, but honestly, I think it would have been just as intense with or without the pandemic. One upside about taking summer school during a pandemic was that the class sizes were a lot smaller, so we got to know each other and the teacher got to know us well too.&nbsp;&nbsp;<i class="fa-solid fa-quote-right"></i>  <br>  
+&ndash; Grade 12 student from Lord Byng Secondary School (Vancouver) <br><br>
+
+   <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;VLN Summer Physics 11 was a tiresome yet rewarding journey. I chose to do Physics 11 at VLN because I didn't feel comfortable attending summer school in-person during the pandemic. Had it not been that this course is a prerequisite, I would not have stayed in the course as I had overcommitted to responsibilities this summer and was not prepared for the immense workload. Much of the material was comprehensible yet difficult to fully understand. I relied on external sources such as YouTube videos and online articles to fully grasp a handful of the concepts. Looking back at those days I stayed up till 3 am to beat that 8 am deadline, I'm proud of myself for persevering. I hope those who take summer courses at VLN (especially science courses) understand how heavy the course load is and ensure they have an appropriate amount of time to dedicate to their studies.&nbsp;&nbsp;<i class="fa-solid fa-quote-right"></i>    <br>
+&ndash; Bella, a grade 12 student from Sir Winston Churchill Secondary (Vancouver) <br><br>
+
+   <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;It started very early in the morning and lasted almost 4 hours. The pace was very fast and not enjoyable in my experience. Think of the quarter system but even more sped up and with more work. It may depend on the subject you choose but definitely more academic courses will be difficult.&nbsp;&nbsp;<i class="fa-solid fa-quote-right"></i>  <br>  
+&ndash; Anonymous <br><br>
+
+   <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;I have taken summer school every year since grade 9. In grade 9 summer, I took Science 10. In grade 10 summer, I took Pre-calculus 12; this was the year that the pandemic hit. Last year, it wasn't too stressful because I only took one course and I had a lot of time to study at home. However, this year, I took English 12 and Physics 12. This was the most stressful experience in my whole life. English 12 was not available at my school, BMSS, so I registered for my courses at Alpha which turned out to be a huge mistake. Summer school started at 8:15 a.m. and it took at least 20 minutes (30 minutes when traffic was bad) to get to school which meant that I had to wake up every day at 6:30 a.m. After 8 hours of school, I had to transit back home, which took one hour. It would be around 5:30 p.m. by the time I got home. I would eat dinner and prepare to study around 7:00 p.m. Some days I had to do some extracurriculars, and so I started studying at 8:00 p.m. Usually, the homework load was crazy––I had to spend at least 4 hours each on the subject (I wanted more time but I never had the time). The earliest time that I slept for the past 4 weeks is at 2 a.m. in the morning and the latest time was 4 a.m. I would go to school after sleeping four or less hours and the teacher talking was almost like a lullaby and I literally dozed off every day. Every single day, I thought about dropping the courses, but I am glad I made it through. However, I do not recommend this. I hope students will just take one course for summer school and if they need to take the 2 courses, take it at a school that is close to their house!&nbsp;&nbsp;<i class="fa-solid fa-quote-right"></i>   <br>
+&ndash; Ariel, a grade 12 student from Burnaby Mountain Secondary School (Burnaby) <br><br>
+
+   <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;It was easier than in person classes as the tests were all online. It was tiresome as we just looked at a screen for hours, but I was able to go at my own pace.&nbsp;&nbsp;<i class="fa-solid fa-quote-right"></i>   <br>
+&ndash; Grade 11 student from Milliken Mills High School (Markham, Ontario) <br><br>
+
+   <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;It went along fine, I learned new things.&nbsp;&nbsp;<i class="fa-solid fa-quote-right"></i>    <br>
+&ndash; Grade 11 student from RE Mountain Secondary School (Langley)<br><br>
+
+   <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;It was easier than actual school and because I took social studies it was bearable.&nbsp;&nbsp;<i class="fa-solid fa-quote-right"></i>    <br>
+&ndash; Grade 9 student from Sir Winston Churchill Secondary (Vancouver) <br><br>
+
+   <i class="fa-solid fa-quote-left"></i>&nbsp;&nbsp;The course I took, English, was extremely tiresome and it was difficult to get an A. I probably wrote more than 20,000 words in total for assignments in a span of a few weeks. Although it was tiring, COVID-19 did not impact much of the course because the nature of summer school is already accelerated. Furthermore, multiple people dropped out of my class because of their marks. Our teacher marks quite strictly; the best test score on the final exam was 87%. This is quite troubling for many students in the class because they believed they needed 90%+ averages to get into top competitive schools. Summer school is very hard to balance, therefore if you plan on taking it, I suggest students to not have any extracurriculars or work in order to focus on their grade and workload.&nbsp;&nbsp;<i class="fa-solid fa-quote-right"></i> <br>   
+&ndash; Grade 12 student from Burnaby North Secondary (Burnaby)<br><br>
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

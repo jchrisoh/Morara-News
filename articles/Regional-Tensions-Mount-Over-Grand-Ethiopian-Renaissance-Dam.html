@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            World
+        </div>
+        <div class="title">
+            Regional Tensions Mount Over Grand Ethiopian Renaissance Dam
+        </div>
+        <div class="author">
+            By Chelsea Hu | Published Jul 28, 2020 9:07 p.m. PST
+        </div>
+        <img src="../images/image-119.png" width="100%" height="auto">
+        <div class="article">
+            In an increasingly globalized world, the notion of being a global citizen has been emphasized more than ever before. However, for many individuals, the need to understand the puzzle pieces that compose the complexity of the world diverges from the lackluster efforts to comprehend the events outside of our own borders. While people aim to understand the fabric of the county, the city, the province, and the country they call their own, people generally make limited attempts to understand the world they are citizens of. As a 2018 study conducted by the Pew Research lab demonstrated, individuals radiate towards accessing national and local news sources over international sources, which may be explained by the lack of public interest in international issues. Another study conducted in 2013 found that the public in a host of countries, namely the US, Canada, Norway, Japan, and Colombia amongst others, had more vested interest in domestic issues than international issues. <br><br>
+
+This problem of lacking international interest is now more pressing than ever, as disputes and conflicts stir in different corners of the world. It is only when we make an effort to understand these global problems outside of our backyard that we can begin to claim the title as a global citizen. <br><br>
+
+In a broad sense, the dispute concerning the Grand Renaissance Dam is like any other dispute: one where two countries have conflicting desires, both of which can be justified. But what differentiates the Grand Renaissance Dam, otherwise known as the Nile Dam, from other controversial projects is its sheer magnitude and the prospective role that it may play in the lives of Ethiopians, Egyptians, and the Sudanese. The dispute features an interesting duality: while the creation of the largest hydroelectric dam in the African continent boasts of modernity, the factors are threaded with historical and cultural relevance. With its construction beginning in 2011, the Grand Renaissance Dam has been an area of conversation for a while; however, the latest disputes do not concern the construction of the dam, but rather the rate at which the dam will be filled. The Ethiopian government has poured an estimated 4.5 billion dollars to make the Nile dam, but whether the benefits will exceed those costs is not entirely up to the government. <br><br>
+
+<b>What Ethiopia Expects to Gain</b><br>
+
+The simple facts and interests held by countries behind this dispute is clear. The Grand Renaissance Dam is located near the Sudan-Ethiopia border, upstream of the convergence between the so-called "blue" and "white" branches of the Nile River. Ethiopia, the country behind this project, sees the construction and usage of the Grand Renaissance Dam to be a hopeful opportunity. They hope to remove their citizens from poverty and gain economic grounding on the world stage. If everything follows Ethiopia’s plans of filling the dam within the next five to seven years, they will be able to access the benefits of providing electricity and internet to their citizens at the very least. In the likely case, the dam will also produce some excess electricity for potential exportation to nearby countries as a source of profit. The current production of electricity is predicted to be approximately 4000 megawatts, and this dam alone can contribute another 6000. However, there is always another side to the story. <br><br>
+
+<b>Egypt</b><br>
+
+For Egyptians who have relied on the Nile as the primary source of water and sustaining life through fishing and agricultural processes, the utilization of this new dam may be catastrophic. With pollution and climate change becoming increasingly worrisome for Egypt as soil becomes infertile, the dependence on the Nile is greater now than ever. Egyptian civilization from emergence has been centered around the Nile River, with Ancient Egyptians, who lived over 5000 years ago, depending on the river for subsistence agriculture. Without even considering the practical implications of this project on the current Egyptian society, protecting Egypt’s access to the Nile is an empathetic cause due to the river being a point of pride, culture, and fascination. The Grand Renaissance Dam poses a threat to Egypt, as it will likely alter and decrease the flow of the Nile into the country. The severity of impact that Egypt will face is dependent on the rapidity with which the dam will be filled. <br><br>
+
+According to the Al Jazeera labs, if Ethiopia fills up the dam in 10 years, it will cut Egyptian water supply by 14 percent and destroy 18 percent of its farmland. Comparatively, if they expedite the process and limit it down to 5 years, Egyptian water supply will decrease by 36 percent and Egypt’s farmland will effectively be halved. <br><br>
+
+<b>Sudan</b><br>
+
+The other actor in the game worth mentioning is Sudan. Sudan generally shares the same opinions as Ethiopia in supporting the Nile Dam, but for different reasons. Flooding has become a large problem in Sudan, devastating cities and villages. Any hope to prevent this devastation would work in their favor. <br><br>
+
+<b>History of the Nile</b><br>
+
+In 1929, Egypt and its British colonizers crafted the Anglo-Egyptian treaty that guaranteed Egypt access to the Nile and the ability to veto any construction projects down the line. If Ethiopia had signed this treaty, perhaps the balance of powers would look quite different than what it does now. Ethiopia, however, did not sign the treaty making it slightly irrelevant, but still interesting to note, in the current discussion. In 1999, the Nile Basin Agreement commended cooperation when using the Nile to access mutual socioeconomic benefits that the river had to offer. However, given the conflicting nature of this dam, it seems as though cooperation is difficult, if not impossible. This reality is becoming more apparent in the 10 years’ worth of failed negotiations over the Nile Dam. In 2010, the Nile Basin Cooperative Framework was released and signed by Ethiopia, but Egypt rejected it, stating it posed a risk to their water supply. <br><br>
+
+Ethiopia initiated the Grand Renaissance Dam construction during 2011, during the Arab Spring in Egypt. Protests sparked all around the nation, some in the name of overthrowing President Mubārak, the former president of Egypt. Regardless of the reasons behind these protests, Egypt may have been distracted from critiquing and preventing the beginning of the Nile Dam construction. <br><br>
+
+<b>Conflict between Ethiopia and Egypt</b><br>
+
+Since then, there have been other allegations made between Ethiopia and Egypt. In 2018, Ethiopia accused Egypt of sending rebels to sabotage the dam's construction, and the Sudanese military was called on to send troops by the border, where the alleged rebels were. <br><br>
+
+While there has not been much violence committed over the disagreements surrounding the dam, there are violent threats being thrown all over the negotiating table and in media sources. The prime minister of Ethiopia, Abiy Ahmed, has stated that he would be willing to go to war against Egypt in the case of escalatory tension and conflict. <br><br>
+
+In early July of 2020, it was announced that Ethiopia had begun to fill the Grand Renaissance dam without the approval from Egypt. No conflict broke out, and the two countries are now back in the negotiation phase. According to Ethiopia, the two countries have reportedly agreed on a first-year target. 280 million people will be affected by this dam, many of whom are currently vulnerable and impoverished. As the Nile crosses in and out of 10 countries, the regional influence of disputes will be notable. <br><br>
+
+<b>Students' Perspectives</b><br>
+
+It is our job as global citizens to understand the lives of those who may not be our neighbors, but are equally deserving of our attention. Egypt and Ethiopia may not be where many of us are located, and the Nile Dam disputes may not concern many of us directly, but we ought to be concerned about and focused on building an understanding of the complexities in our shared globe. <br><br>
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
