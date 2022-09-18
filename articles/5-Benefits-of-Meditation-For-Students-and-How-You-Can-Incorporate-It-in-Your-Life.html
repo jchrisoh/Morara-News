@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="#b">World</a>
+        <a href="#c" id="red">Interviews</a>
+        <a href="#d">Sports &#38; Entertainment</a>
+        <a href="#e">Coronavirus</a>
+        <a href="#f">Business &#38; Technology</a>
+        <a href="#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            5 Benefits of Meditation For Students and How You Can Incorporate It in Your Life
+        </div>
+        <div class="author">
+            By Hanna Grover | Published Jan 31, 2022 1:19 p.m. PST
+        </div>
+        <img src="../image-33.png" width="100%" height="auto">
+        <div class="article">
+            Meditation has many benefits that are scientifically shown to change someone's daily life for the better. We have been shown with many research cases and studies that clearly explain the positive impact meditation has, but sometimes we often have trouble incorporating new habits in our lives or creating a habit in the first place. Below are five benefits of meditation that are geared towards improving a daily student's life as well as quick, easy tips on how to incorporate them within our busy schedules. <br><br>
+
+<b>1. Meditation Reduces Stress and Anxiety</b><br>
+We receive new information everyday, and sometimes you need to clear away the information overload that builds up every day and contributes to your stress. Meditation has been scientifically proven to reduce stress and provide a tranquil mind. During meditation, you focus your attention on one thing and eliminate the thoughts that may be overpowering your mind and causing stress. Many of us have such busy schedules, and that is why meditation is so convenient. If you're out for a walk, riding the bus, about to write a test, or just sitting empty-handed, meditation is quick and easy. The next time you need to clear your mind, try using meditation methods that work for you such as, closing your eyes or taking deep breaths. <br><br>
+
+<b>2. Helps Reduce Mistakes</b><br>
+We all have days where we just can't seem to stop repeating the same mistakes. Researchers found after 20 minutes of meditation, the strength of brain signal increased by a significant amount. It made the meditators more sensitive to error positivity signals, helping them to be aware of mistakes they might be making. This helps them to not repeat the same mistakes again. If you're having a hard time focusing and avoiding making the same mistake, all it takes is 20 minutes out of your schedule to improve that. <br><br>
+
+<b>3. Meditation Increases Focus</b><br>
+Many of us have times where we need to focus on homework, or are in class but are tired and can't seem to concentrate. When we meditate, we are focusing on one thing. Mindfulness comes naturally to us when we meditate, and we reach a ‘flow’ state where our mind is in complete harmony. This was scientifically proved when a study on the effects of an eight-week mindful meditation course showed that people who regularly meditated had a larger attention span than the people who did not. <br><br>
+
+<b>4. Meditation Promotes a Good Sleep Schedule</b><br>
+Often, students are swamped with work to do and this becomes a detriment to our sleep schedule. When we finally go to sleep, we notice that we cannot fall asleep as our mind is cluttered with so many thoughts. Meditation can help relax your body and release tension that can be causing you to have trouble falling asleep. One study found that people who practiced meditation before bed or daily fell asleep faster and stayed asleep for longer compared to those who didn’t meditate.<br><br>
+
+<b>5. Meditation Helps Boost Self-Esteem</b><br>
+You may find yourself feeling low or defeated after a long day of school or work. Mindfulness meditation promotes you to slow down, allows for deeper self-reflection, and can help you find positive attributes about yourself. It helps increase self-awareness by examining your thoughts and feelings without judgment, which gives you the outcome of improving self-esteem. <br><br>
+
+<b>How You Can Incorporate Meditation In Your Life</b><br>
+It is hard to create a new routine and habit, but with a little determination, it is very possible. We know the benefits of meditation and understand that it can improve our wellbeing in all aspects, but students are always extremely busy with school, homework, social lives, and balancing everything at once. Though meditation has great benefits, like all good habits and routines, it takes time to form them. A great way to build up this habit and incorporate meditation into your life as a routine is to start by taking out some time in the day for meditation, and more importantly, yourself. The key to creating a good habit is repetition so meditate at the same time each day. For example, if you’re an early riser, then a morning meditation would be beneficial for you. You could start with a 10-minute meditation every day for a period of time, then gradually meditate for longer. Finding what meditation works for you is also important, and knowing that there are many different forms is crucial too. If you are having trouble creating a routine with meditation, try doing it with a friend or family member to keep yourself accountable. <br><br>
+
+Meditation is for you to relax and de-clutter your mind. Sometimes, we have so much running in our minds we find ourselves being lost and aimless. By incorporating a regular meditation into your day, you can improve your overall well-being.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
