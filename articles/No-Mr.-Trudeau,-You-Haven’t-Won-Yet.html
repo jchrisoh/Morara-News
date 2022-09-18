@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="#b">World</a>
+        <a href="#c" id="red">Interviews</a>
+        <a href="#d">Sports &#38; Entertainment</a>
+        <a href="#e">Coronavirus</a>
+        <a href="#f">Business &#38; Technology</a>
+        <a href="#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            No Mr. Trudeau, You Haven&#39;t Won Yet
+        </div>
+        <div class="author">
+            By Keyaan Vegdani | Published Aug 31, 2021 9:48 p.m. PST
+        </div>
+        <img src="../image-105.png" width="100%" height="auto">
+        <div class="article">
+            After Trudeau triggered a snap election on August 15th, 2021, it seems that those opposed to his decision are working harder to win. <br><br>
+
+Within the first 2 days of the race Trudeau’s campaign was met with a shock. On August 17th, 2021, Tim Houston and the Progressive Conservatives coasted their way to an unexpected majority government in the Nova Scotia provincial election. The PC now holds 31 seats, while the Liberals hold a measly 17. Of course, the results of a provincial election cannot be completely extrapolated to this upcoming federal vote. In fact, premier-designate Houston was quick to distance himself from the O’Toole campaign emphasizing the progressive nature of the PC. However, before the election, the polls had the provincial Liberals 28 points ahead, like polling data that favored Trudeau at the end of July. What changed the outcome on election day? <br><br>
+
+The way both campaigns were run. <br><br>
+
+It’s simple. Take away the party branding of both the candidates and voters were left with two options. The charismatic Tim Houston who ran a campaign with a clear focus on fixing healthcare issues within the province, or the somewhat arrogant Iain Rankin who, assuming they had already won the election, ran a disorganized campaign without a clear message or goal. <br><br>
+
+Sound familiar? <br><br>
+
+Now, 2 weeks into this 6-week election, the Trudeau campaign were last to reveal their platform, and they are constantly being forced to justify a mid-pandemic election. They have put more emphasis on their past pandemic successes than they have on explaining to voters a clear future for Canada. Trudeau promises to “move forward for everyone” but to voters, it's not clear how. <br><br>
+
+Furthermore, after a lackluster first week of campaigning, Trudeau chose to take last Saturday off. Contrastingly, the NDP and Conservative campaigns continue to hold events and rallies, announcing new ideas and policies every day. Meanwhile, Trudeau’s campaign is confident enough to take a day off. <br><br>
+
+Jagmeet Singh’s NDP and Erin O’Toole’s Conservatives do not have to answer for the election. Although none have run campaigns to the level of Tim Houston, they are doing a better job of presenting a united message. The former is targeting young voters, by promising to eliminate student debt and employing social media as a novel campaign technique. Similarly, the latter is focusing on stabilizing the economy after the pandemic and balancing the budget. <br><br>
+
+In assuming a clear path to victory, the Trudeau campaign has not changed much since 2019. They continue to bombard O’Toole with a strategy used for the former leader Andrew Scheer, attempting to label him as anti-abortion, and an anti-vaxxer, when he has denied both. <br><br>
+
+So, where does Trudeau go from here? With polling numbers evening out between him and Mr. O’Toole, it’s clear that the campaign needs a wow factor, and Trudeau must realize that they haven’t won yet. In fact, it was leaked that Trudeau had asked his candidates to come up with ideas to excite voters. Yet, if you were the one to decide when the election was called, shouldn’t those ideas already have been ready? <br><br>
+
+In the end, there are three likely outcomes of this election: a Liberal majority, a Conservative minority, or a Liberal minority. A Liberal majority is not guaranteed, and if on September 20th voters choose the last two, Trudeau will have to answer for a big waste of time and money.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

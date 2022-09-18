@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Coronavirus
+        </div>
+        <div class="title">
+            Navigating Mental Health in a Pandemic
+        </div>
+        <div class="author">
+            By Lily Nordgren | Published Aug 3, 2020 10:17 p.m. PST
+        </div>
+        <img src="../image-132.png" width="100%" height="auto">
+        <div class="article">
+            For many people struggling with mental health issues, staying at home for months on end is threatening; isolation and fear can be looming barriers to recovery. Teens, young adults, essential workers, and those with pre–existing mental illnesses are at higher risk for negative impacts to their mental health. News sources and social media flash warnings of long-term COVID-19 consequences, political mandates, and social traumas. Financial struggles intensified by unemployment or reduced hours influence stress levels immensely. Without ready access to in-person mental health services, safe spaces outside the home, or other support networks, how can mental health be navigated? <br><br>
+
+Mental health actively affects physical health, relationships, and personal and professional development. Someone with an anxiety disorder can regularly experience a general feeling of fear or doom. Depression can contribute to feelings of hopelessness, anger, and disinterest. A crisis can increase these feelings of fear, stress, and grief due to unstable, potentially dangerous daily routines. A survey done by Statistics Canada in May showed that 88% of participants were regularly experiencing at least one symptom of anxiety. 64% of participants aged 15–24 reported negative effects on their mental health since physical distancing began. Prioritizing mental health like never before, especially the health of those in financially difficult circumstances will be fundamental to ensure collective recovery when the impacts of the pandemic are lessened. But how can mental health be supported while we isolate from each other? <br><br>
+
+Reaching out can seem daunting because of the vulnerability it demands. A functional support system requires checking in on others, to avoid putting responsibility on someone to tell you they are struggling. Mental illnesses often have an isolating effect that increases when there is no requirement to be in social settings. If talking with people you trust is not accessible, there are a number of free online therapy websites and services: <br><br>
+
+&#8226; Wellness Together Canada (https://ca.portal.gs) is an online organization supported by the Government of Canada, offering free counseling and information.<br><br>
+
+&#8226; The Centre for Interactive Mental Health Solutions (https://CIMHS.com) has an eight-step program involving techniques to help manage depression.<br><br>
+
+&#8226; 7 Cups (https://www.7cups.com) has trained listeners reachable 24/7, self-help guides, and community forums to talk with others about shared experiences.<br><br>
+
+&#8226; Hope for Wellness Help Line (1-855-242-3310) is available for Indigenous peoples who are in crisis or in need of counseling.<br><br>
+
+&#8226; Crisis Services Canada (1-833-456-4566) is available for those in crisis or considering self-harm.<br><br>
+
+People in crisis adapt their emotions as well as their habits. Feeling anxious, scared, and confused are normal responses, but it is important to keep an eye on the progression of mental health. If those feelings begin to prevent the completion of daily activities, like schoolwork or hygiene, it is important to check in with yourself. Keeping up with current events is advised, but the cycle of traumatic stories can quickly become overwhelming. The Canadian Mental Health Association advises that taking a break can be helpful to work through information while avoiding panic. If mental health begins to impede on your passions, relationships, or physical health, it is important to know when you need to ask for help. Navigating mental health can be complicated, especially in a pandemic. Supporting each other, focusing on what is in our control, and accepting all emotions as normal can help make a situation slightly more manageable. <br><br>
+
+<b>Students' Perspectives </b><br>
+
+Mental health is often ignored by the majority. When health issues become prevalent, they can impede academic progress. In times of crisis when uncertainty is widespread, ignoring the stigma associated with mental health and seeking help can be beneficial.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

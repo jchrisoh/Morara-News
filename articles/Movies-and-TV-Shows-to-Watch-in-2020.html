@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            Movies and TV Shows to Watch in 2020
+        </div>
+        <div class="author">
+            By Chloe E.C. | Published Nov 17, 2020 12:07 p.m. PST
+        </div>
+        <img src="../image-101.png" width="100%" height="auto">
+        <div class="article">
+            <b><i>1. Little Fires Everywhere</i></b> 2020 TV series, based on the novel by Celeste Ng (2020) <br>
+            <b>Type</b>: TV Series <br>
+            Brief Description: Little Fires Everywhere is a TV series based on a novel published in 2017 by author Celeste Ng. The story takes place in the 1990s in an area known as Shaker Heights, where two families reside in. You can find this TV series on Hulu. <br><br>
+            
+            <b><i>2. The Baby Sitters Club</i></b> based on the books by Ann M. Martin (2020) <br>
+            <b>Type</b>: TV Series (Remake) <br>
+            Brief Description: The Baby-Sitters Club is comedy-drama TV series that was released on July 3rd, 2020. The TV series is based on the book series written by Ann M. Martin and can be viewed on Netflix. <br><br>
+            
+            <b><i>3. Leave No Trace</i></b> (2018) <br>
+            <b>Type</b>: Film <br>
+            Brief Description: Released in the United Kingdom on June 29, 2018, Leave No Trace describes the struggles and challenges that a father and daughter are forced to overcome. You can find the movie on Youtube.<br><br> 
+            
+            <b><i>4. Jojo Rabbit</i></b> (2019)<br> 
+            <b>Type</b>: Film <br>
+            Brief Description: Jojo Rabbit, which was released on September 8, 2019, features Scarlett Johansson, Taika Waititi, and Roman Griffin Davis. Jojo, who is a lonely German boy with a firm belief in Nazism, finds out that a Jewish girl is being hidden in his house by his mother. <br><br>
+            
+            <b><i>5. Space Force</i></b> (2020)<br> 
+            <b>Type</b>: TV Series <br>
+            Brief Description: Space Force is a comedy television series created by Greg Daniels and Steve Carell. The television series presents a group of people whose task is to create the sixth branch of the United States Armed Forces. <br><br>
+            
+            <b><i>6. Never Have I Ever</i></b> (2020)<br> 
+            <b>Type</b>: TV Series <br>
+            Brief Description: Never Have I Ever is a comedy-drama television series that revolves around Devi Vishwakumar, an Indian-American high school student, who wants to return to a normal life after a rough freshman year. <br><br>
+            
+            <b><i>7. Black Panther</i></b> (2018) <br>
+            <b>Type</b>: Film <br>
+            Brief Description: Black Panther was released on January 29, 2018, and broke box office records with an overall box office of $1.344 billion dollars. The film describes T’Challa’s multiple obstacles in inheriting the throne and protecting his nation, Wakanda. <br><br>
+            
+            <b><i>8. Tenet</i></b> (2020) <br>
+            <b>Type</b>: Film <br>
+            Brief Description: Tenet, a film released on August 26, 2020, is a science fiction film that is full of action and thrill. The film is about a CIA agent who participates in a secret mission to prevent World War III. <br><br>
+            
+            <b><i>9. Little Women</i></b> (2019) <br>
+            <b>Type</b>: Film <br>
+            Brief Description: Little Women was released on December 7, 2019 and is a contemporary drama film written and directed by Greta Gerwig. The film is set in New England during the American Civil War and centres four sisters and their mother who try to find their place in the world. <br><br>
+            
+            <b><i>10. The Good Place</i></b> (2016) <br>
+            <b>Type</b>: TV Series (4 Seasons) <br>
+            Brief Description: The Good Place is a fantasy comedy television series created by Michael Schur. The film presents The Good Place, which is a town that deceased people go to if they have been good in their lives, and revolves around Eleanor who arrives at The Good Place, but realizes she is mistaken for somebody else. <br><br>
+
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

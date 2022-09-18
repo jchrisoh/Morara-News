@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Sports &#38; Entertainment
+        </div>
+        <div class="title">
+            The Rise of BTS
+        </div>
+        <div class="author">
+            By Holly Li | Published Oct 5, 2020 12:18 p.m. PST
+        </div>
+        <img src="../image-129.png" width="100%" height="auto">
+        <div class="article">
+            Last updated: Sep 30, 2020 <br><br>
+
+<b>BTS</b> <br>
+
+BTS’s newest release, “Dynamite”, has spent 3 weeks at No. 1 on the Billboard Hot 100 songs chart. The music video of Dynamite had over 99 million views on its first day of release, making it the most viewed music video for the first 24 hours on YouTube. A popular K-pop boy group, BTS has fans from all over the world. How did they gain such popularity? <br><br>
+
+<b>Who is BTS?</b><br>
+
+BTS, also known as Bangtan Boys, is a K-pop boy band that debuted in 2013 under Big Hit Entertainment. The group is composed of seven members: RM, Jin, Jimin, Jungkook, Suga, V, and J-Hope. Their music concerns topics that include mental health, growth, self-love, etc. Correspondingly, their music videos and performances feature unique concepts and storylines that address these issues. <br><br>
+
+BTS is the best-selling artist in South Korean history, having over 20 million of sales on the Gaon Music Chart. As of 2019, BTS is purportedly worth more than $4.65 billion to South Korea's economy each year. BTS ranked #4 on Billboard's Top Social Artist of the 2010s and is the highest group on the list. BTS has received the Order of Cultural Merit from the President of South Korea due to their contributions in spreading Korean culture and language. <br><br>
+
+<b>Careers</b> <br>
+
+BTS did not encounter much success right after their debut. When they released their debut single album 2 Cool 4 Skool, their album sold less than 30 thousand copies in 2013. Even worse, the song flopped from the chart quickly after the release. BTS did not gain significant popularity until their release of an album named "花樣年華”. The lead single “I Need U” achieved 5 wins on the music shows in South Korea. The music video of “I Need U” displays the friendship and the misfortunes of seven teenagers, acted by BTS. In spite of mental health issues and broken families, the teenagers are able to save each other and portray their unique adolescence. The inspiration of the music video originates from the cartoon “Save Me”. The album “Wings”, released in 2016, continues the concept of “花樣年華”. The lead single “Blood Sweat and Tears” achieved an “all-kill” in Korean music charts. The music video of the song expresses the importance of abandoning one’s dark childhood and opening up one’s view of beautiful things to come in the future. The concept is inspired by Demian, a famous book by Hermann Hesse. During 2017 - 2018, BTS gained international recognition with the release of "起承轉結" and releasing four new EPs. In November 2017, BTS made history by being the first K-pop group to perform at the American Music Awards. Continuing their success, BTS also sold 5 million albums in 2018.<br><br> 
+
+<b>What Has Contributed to Their Success? </b><br>
+
+BTS is recognized as a unique K-pop group. There are multiple reasons that contribute to its success: outstanding music quality, impressive visuals, and meaningful themes. Most of BTS’s songs are produced by the members themselves with the assistance of other producers. This ensures that members of BTS are able to directly impact the quality of their music and that the songs produced resonate with others across the world. In addition, the collaboration between BTS and other singers increases the BTS’s popularity and presence on the world stage.. Their outstanding music is the main reason why BTS was able to gain the attention from the public even though they started off as artists under a small entertainment company. Furthermore, the impressive visuals of the members have added to the group's popularity. Numerous fancams of members on YouTube received more than 10 million views. What’s more is that the themes and values of BTS’s albums and songs are what attract the most amount of fans. The concept of “self-love” is a universal one that is embraced by people from different cultures and nations. The meaningful values of BTS’s music separates them from other artists and bands. <br><br>
+
+<b>Students' Perspectives</b><br>
+
+BTS is one of the most popular artists among students as well. Although BTS has had some world tours, none of the concerts have taken place in Vancouver. Luckily, students in Vancouver are still able to purchase BTS albums on websites such as Ktown4u and purchase peripheral products at BT21. Let’s hope that concerts will happen in Vancouver in the future!
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

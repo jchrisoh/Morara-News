@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Sports &#38; Entertainment
+        </div>
+        <div class="title">
+            Michael Bublé's Strange Connection to Burnaby's Smallest High School
+        </div>
+        <div class="author">
+            By Keyaan Vegdani | Published Feb 1, 2022 3:14 p.m. PST
+        </div>
+        <img src="../image-13.png" width="100%" height="auto">
+        <div class="article">
+            By far the smallest secondary school in the Burnaby district is Ecole Cariboo Hill Secondary School, and unlike most of its relatives it doesn’t often find itself within the public eye. However, amongst the rankings of notable alumni, Cariboo Hill may find itself near the very top. <br><br>
+
+North and South have produced promising young athletes like ice hockey player Ryan Nugent-Hopkins, and soccer superstar Alphonso Davies, respectively; but Cariboo may have laid the groundwork for an international music superstar. <br><br>
+
+He’s Feeling Good, it’s none other than Michael Bublé. A member of the 1993 graduating class, Bublé was the first of three family members to work their way through the school. Following him were his sisters Brandee and Crystal. <br><br>
+
+Bublé will always be a Burnaby boy; he currently has a home on Government St. and frequents the neighbourhood often. A co-owner of the Vancouver Giants and a die-hard Canucks fan, Bublé plays an avid role in the Vancouver sports scene. He openly talks about his obsession with the club, making appearances on talk shows such as Tim and Friends on Sportsnet. <br><br>
+
+Almost all of Bublé’s education took place in Burnaby, even his early years of schooling. As an alumnus of Seaforth Elementary school, he often contributes to the institution in a plethora of different ways. In fact, his very own children attend it. <br><br>
+
+Contrastingly, Bublé often never talks about his time at Cariboo Hill Secondary, and rarely mentions it in interviews. Yet, Bublé explained to the Vancouver Magazine what it was like attending his high school reunion a few years back. “Not many people knew I was coming,” the Juno Award winner explained. “It was probably the most terrifying moment of my life.” Even though he doesn’t look back fondly on his high school years, he recognizes the role they played in constructing who he is. “You never really change, you’re the same person that you were,” he emphasized. “Because of that, you worry that other people have changed… but they’ve all grown into amazing people.” <br><br>
+
+Bublé makes it clear that his time at Cariboo Hill and the hardship he experienced has shaped his demeanor. He always tries to have a positive outlook on life and shows that through his kind heart. Bublé is forever thankful that he was able to grow up in Vancouver and is even more cognisant of that fact now. “We travel between here and Buenos Aires,” he illustrated. “It’s nice to know that you don’t have to lock the door if you know what I mean.” <br><br>
+
+The singer’s relationship with his high school years remains clouded in a lot of mystery. As a result, the members of the current Cariboo Hill yearbook team are looking to interview the star for the 60th anniversary of their annual. Since 1993, the scholastic setting surrounding Cariboo Hill has drastically changed, and maybe a visit to the building may allow Bublé to develop a bit of closure. <br><br>
+
+Nevertheless, nothing in life is certain, and it seems from his graduation quote that he was ecstatic to be leaving. <br><br>
+
+“My 5 years at Cariboo were unforgettable, to all girls I’ve loved before and to the GRG Jr’s and New Edition, may all your dreams come true. I’d like to thank my parents and wish the best of luck to Brandee and Crystal. A special thanks to God who has given me all the friends and family that have made my life the greatest. And God bless Harry Connick Jr. for learning the recipe for making love. R.A., Grandma, Grandpa, C.T. It had to be you!” <br><br>
+
+Or maybe he would want to go back and edit that grad quote?
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

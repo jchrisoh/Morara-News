@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            World
+        </div>
+        <div class="title">
+            How Lunar New Year is Celebrated in China
+        </div>
+        <div class="author">
+            By Holly Li | Published Feb 15, 2021 12:56 a.m. PST
+        </div>
+        <img src="../image-115.png" width="100%" height="auto">
+        <div class="article">
+            The Lunar New Year in 2021 is on February 12. It is the new year based on the lunar calendar. The Lunar new year is particularly celebrated in Eastern Asia, with its origin in China. The first Lunar New Year celebration can be traced back to 475 BC – 221 AD. The length of the celebration can last up to a month. The lantern festival marks the end of the Lunar New Year. <br><br>
+
+<b>Food to Try on Lunar New Year</b> <br>
+
+<b>Dumplings</b> <br>
+According to history records, dumplings were invented to treat patients who suffered from frostbites. Later, people adjusted the ingredients and brought the dumplings to the dining table. <br><br>
+
+Dumpling is a classic food for the Spring Festival. Because the shape of the dumpling resembles shoe-shaped gold ingots, ancient Chinese currencies, dumplings represent wealth and fortune. In some places, people place coins and peanuts inside of the dumplings, intending to bring good luck to the diners. Dumplings are usually made on the eve of Lunar New Year and eaten at 12 o’clock so as to celebrate the renewal. <br><br>
+
+<b>Whole Fish </b><br>
+Whole Fish is usually the last dish eaten on Lunar New Year’s Eve. In some places, people leave the fish uneaten which symbolizes the idea of having surplus. “Fish” sounds similar to “surplus” in Mandarin. Different fish carry different messages. For example, carps represent lucky fortune, and salmon represents wealth. <br><br>
+
+<b>Tangyuan</b> <br>
+Tangyuan is made of sticky rice, sesame, and sweet beans. Having a round shape, Tangyuan represents completeness and perfection. People usually eat Tangyuan for breakfast to wish for a glorious new year. <br><br>
+
+<b>Longevity Noodles </b><br>
+Thin, long noodles represent longevity. The cook needs to be careful while boiling the noodles to ensure they are not broken, since the broken noodles can symbolize a cut in one’s life span. <br><br>
+
+<b>Cured Meat</b> <br>
+Cured meat can be made of chicken, pork, fish, or duck through the process of air-drying. Traditionally, people wrap the meat with salt, pepper, and other sauces and hang the meat on the balcony. After several weeks, the water and fat within the meat is dried while the meat becomes “smoked”. Cured meat can be cooked with rice, soup, or fried dishes. <br><br>
+
+<b>Customs of Lunar New Year</b> <br>
+
+<b>Red Pockets</b> <br>
+On Lunar New Year’s Eve, parents and grandparents usually give red pockets to their children and grandchildren. The red pockets contain money, which people believe can protect kids from evil creatures and bad luck. According to some surveys, the average amount of money stored in red pockets per kid is around 100 dollars. <br><br>
+
+<b>Temple Fair</b> <br>
+The primary goal of the temple fair is to worship the gods. Activities in the temple fair include lion dance, throwing coins, martial art displays, handiwork displays, and operas. Modern temple fairs have a mixture of religious rituals, cultural celebrations and commercial markets. <br><br>
+
+<b>Decorating the House</b> 
+New Year Scrolls, red paper cuttings, and paintings are stuck to windows or doors. These decorations are usually made of red paper, which signifies festivity and good fortune.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

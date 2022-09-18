@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="#b">World</a>
+        <a href="#c" id="red">Interviews</a>
+        <a href="#d">Sports &#38; Entertainment</a>
+        <a href="#e">Coronavirus</a>
+        <a href="#f">Business &#38; Technology</a>
+        <a href="#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            Movies to Watch and Places to Visit This Halloween
+        </div>
+        <div class="author">
+            By Holly Li | Published Oct 23, 2021 12:51 p.m. PST
+        </div>
+        <img src="../image-39.png" width="100%" height="auto">
+        <div class="article">
+            Halloween takes place on October 31st every year. However, the celebrations of Halloween in 2020 were restricted due to the coronavirus pandemic. Is it safe to go trick-or-treating as more people in BC are vaccinated? <br><br>
+
+The following gives you some tips to keep Halloween entertaining enduring the pandemic. <br><br>
+
+<b>Trick-or Treating</b><br>
+BC’s slogan for the upcoming Halloween is to "celebrate less socially and trick-or-treat locally this Halloween.” <br><br>
+
+Doctors suggest having an outdoor trick-or-treat to limit the spread of the virus. A good solution is to organize treats in the yard as a scavenger hunt. It is also important to sanitize the candies’ packages as children will be touching them. It is safer to go trick-or-treating near the neighbourhood rather than malls, since there may not be enough space to distance. <br><br>
+
+<b>Halloween Movies Suggestions</b><br>
+<b>The Ring (Japanese Version)</b><br>
+The Ring is a classic horror movie adapted from a Japanese novel. The movie discusses the story of a reporter and her ex-husband investigating a cursed video tape that is rumored to kill the viewer seven days after watching it. It combines supernatural elements with anxieties about modern technology. <br><br>
+
+<b>Scream (1996)</b><br>
+Scream is a horror movie directed by Wes Craven. It combines black comedy with a mystery of violence. A year after the murder of her mother, a teenage girl is terrorized by a new killer, who targets the girl and her friends by using horror films as part of a deadly game. <br><br>
+
+<b>Orphan</b><br>
+Orphan is a horror film directed by Jaume Collet-Serra. The film describes the mysterious deaths after a couple adopted a nine-year-old girl. The plot of Orphan is tense, whereas it is not as scary as The Ring and Scream. <br><br>
+
+<b>Places to Visit</b><br>
+<b>Burnaby’s Haunted Village</b><br>
+<b>Location</b>: 6501 Deer Lake Ave, Burnaby BC V5G 3T6<br>
+<b>Description</b>: Burnaby Village hosts their Eerie Illusions event daily from October 22nd until the 31st. Burnaby Village is a great place for kids to dress up and see haunted Halloween scenes. <br><br>
+
+<b>Playland Halloween Eves</b><br>
+<b>Location</b>: 2901 E Hastings St, Vancouver, BC V5K 5J1<br>
+<b>Description</b>: This event features circus-like entertainment, like fire breathers, sideshow stunts and contortionists. Close to twenty rides are operating at the PNE in October. <br><br>
+
+<b>Southland Heritage Farm</b><br>
+<b>Location</b>: 6767 Balaclava Street, Vancouver, B.C.<br>
+<b>Description</b>: Southland Heritage Farm is a Pumpkin Patch located in an old apple orchard. It is a great farming oasis in the city. Most Pumpkins have already been harvested and are spread around the orchard for easy choosing. The ticket costs 8 dollars per person.
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
