@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    padding-bottom: 20px;
+}
+
+.topic {
+    color: red;
+    font-family: 'Inter';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 10px;
+    font-family: 'Libre Franklin';
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.author {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Libre Franklin';
+    color: grey;
+}
+
+.container img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-family: 'Libre Franklin';
+    line-height: 2;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="../morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="#b">World</a>
+        <a href="#c" id="red">Interviews</a>
+        <a href="#d">Sports &#38; Entertainment</a>
+        <a href="#e">Coronavirus</a>
+        <a href="#f">Business &#38; Technology</a>
+        <a href="#g">Environment</a>
+    </div>
+    
+    <div class="container">
+        <div class="topic">
+            Student Life
+        </div>
+        <div class="title">
+            2022 AP Exams Do&#39;s and Don&#39;ts
+        </div>
+        <div class="author">
+            By Keyaan Vegdani | Published Apr 15, 2022 9:23 p.m. PST
+        </div>
+        <img src="../images/exam.png" width="100%" height="auto">
+        <div class="article">
+            The AP exams are a little over 3 weeks away, and a lot of students may find themselves slumped with chapters, concepts, and materials to study and learn before those dreaded test days. In many schools, the exams are already in the building, and students are overwhelmed with a sense of looming pressure and dread.<br><br>
+
+However, one problem that plagues a large portion of AP students is that although they are prepared for the materials on the exam, they are not ready for the strict AP procedures. Here are a few “Do’s” and “Don'ts” you should know before walking into your exam stations. <br><br>
+
+<b>Set-Up of Writing the Exams:</b><br>
+First off, the process of writing the exams can be a lot trickier than it seems. Always ensure that you have brought at least two pencils and two pens (either in blue or black ink). Exams that include written portions are often done in ink. Yet, don’t forget that the multiple-choice sections of your exams, filled in on the scantron sheets are always done in pencil, preferably in HB led. At the top of your test, you will have a personal ID number that you have to put on each one of your test’s ID sheets. It usually is in the form of a sticker that slots into place. Remember, if you are writing more than 1 exam, you will stick the same ID number in a similar box on each exam. You will not have access to your bags, or any cellular communication tools. This includes smartwatches, such as Apple Watches and Pebble devices. Note that if you want to keep strict track of your time usage, you are permitted the use of a regular watch that does not have Wi-Fi connectivity. <br><br>
+
+<b>What to do when you start your exam:</b><br>
+&ndash; Check that all information provided is correct.<br>
+&ndash; Check that you placed an AP number label in the white box on page 1 of your scantron/bubble sheet.<br>
+&ndash; You will be given a scantron/bubble sheet for each exam you write.<br>
+&ndash; Your exam instructor and administrator will collect each of your ID labels at the end of each exam if you are writing more than 1 exam.<br><br>
+
+<b>During the Exam:</b><br>
+While writing the exam, you are not allowed to eat or drink aside from having a bottle of water. You may also not leave the room unless there is an emergency. If you need to leave, raise your hand, and you will be escorted to the washroom. Note, this does not mean you will be given extra time to complete your exam. Your time spent in the washroom is your time lost.<br><br>
+
+No dictionaries of any kind are permitted on any of the language exams and be sure to check the College Board websites to identify which calculators you are allowed to use. You are not permitted to discuss the contents of the exam during the 15-minute break provided between sections. <br><br>
+
+<b>After the Exam:</b><br>
+After successfully writing your exam, do not post anything related to the contents of it online via social media platforms or messaging sites. Doing so is considered a cheating offense. The consequences for anyone found indulging in cheating on these tests can not only be serious for yourself, but your classmates as well. Often, all the AP scores will be cancelled. <br><br>
+
+Keep all of these rules in mind as we find ourselves inching closer to exam week. Keep studying hard and remember that each and everyone of you will do amazing on your exams. Don’t stress out too much and know that taking an AP course alone demonstrates your resilience, intelligence, tenacity and hard work. <br><br>
+
+Good luck!
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="">
+                    <img src="../morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
