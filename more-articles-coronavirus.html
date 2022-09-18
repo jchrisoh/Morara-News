@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.category_container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+    max-width: 1100px;
+    font-family: "Libre Franklin";
+    font-weight: 900;
+    text-transform: none;
+    font-size: 24px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+    padding-bottom: 20px;
+}
+
+.more_articles {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+    padding-bottom: 20px;
+}
+
+.container_last {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+}
+
+.article-container {
+    width: 100%;
+    flex: 0 0 33.33333%;
+}
+
+.info-container {
+    padding: 10px;
+}
+
+.info-container:hover {
+    background-color: rgb(255, 235, 235);
+    transition: 0.5s;
+}
+
+.topic {
+    color: red;
+    font-family: "Inter";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 9px;
+}
+
+.title {
+    font-family: "Libre Franklin";
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.description {
+    font-family: "Libre Franklin";
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.close_btn {
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.open {
+    border-radius: 15px;
+    padding: 20px 150px 20px 150px;
+    border: none;
+    font-family: 'Libre Franklin';
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.open:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .category_container {
+        margin-top: 15px;
+    }
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container, .category_container, .container_last {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .article-container {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .article-container {
+        flex: 0 0 100%;
+    }
+    
+    .open {
+        padding: 20px 50px 20px 50px;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="morara-6.png" width="250">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.instagram.com/vancouverstudentvoices/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <!--Coronavirus-->
+    <div class="category_container" id="b">
+        Coronavirus
+    </div>
+    
+    <div class="container">
+        <div class="article-container">
+            <a href="articles/Droplets,-Aerosols-and-COVID-19.html">
+                <div class="info-container">
+                    <img src="images/image-131.png" width="100%" height="auto">
+                    <p class="topic">COVID&ndash;19</p>
+                    <div class="title">Droplets, Aerosols and COVID&ndash;19</div>
+                    <div class="description">Before trying to figure out if COVID&ndash;19 is airborne, it is important to understand the difference between droplets and aerosols. Both have the ability to spread viruses through the air, but only aerosols can be classified as airborne.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Navigating-Mental-Health-in-a-Pandemic.html">
+                <div class="info-container">
+                    <img src="images/image-132.png" width="100%" height="auto">
+                    <p class="topic">Mental Health</p>
+                    <div class="title">Navigating Mental Health in a Pandemic</div>
+                    <div class="description">For many people struggling with mental health issues, staying at home for months on end is threatening; isolation and fear can be looming barriers to recovery.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Uncertain-Future-Over-COVID-19.html">
+                <div class="info-container">
+                    <img src="images/image-134.png" width="100%" height="auto">
+                    <p class="topic">British Columbia</p>
+                    <div class="title">Uncertain Future Over COVID&ndash;19</div>
+                    <div class="description">As the global community continues to struggle with COVID&ndash;19, recently characterized as a pandemic by the World Health Organization (WHO), British Columbia takes stronger measures to combat the surge in confirmed cases within the province.
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="../">
+                    <img src="morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

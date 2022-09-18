@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.category_container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+    max-width: 1100px;
+    font-family: "Libre Franklin";
+    font-weight: 900;
+    text-transform: none;
+    font-size: 24px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+    padding-bottom: 20px;
+}
+
+.more_articles {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+    padding-bottom: 20px;
+}
+
+.container_last {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+}
+
+.article-container {
+    width: 100%;
+    flex: 0 0 33.33333%;
+}
+
+.info-container {
+    padding: 10px;
+}
+
+.info-container:hover {
+    background-color: rgb(255, 235, 235);
+    transition: 0.5s;
+}
+
+.topic {
+    color: red;
+    font-family: "Inter";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 9px;
+}
+
+.title {
+    font-family: "Libre Franklin";
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.description {
+    font-family: "Libre Franklin";
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.close_btn {
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.open {
+    border-radius: 15px;
+    padding: 20px 150px 20px 150px;
+    border: none;
+    font-family: 'Libre Franklin';
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.open:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .category_container {
+        margin-top: 15px;
+    }
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container, .category_container, .container_last {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .article-container {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .article-container {
+        flex: 0 0 100%;
+    }
+    
+    .open {
+        padding: 20px 50px 20px 50px;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="../#b">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <!--Student Life-->
+    <div class="category_container" id="a">
+        Student Life
+    </div>
+    
+    <div class="container">
+        <div class="article-container">
+            <a href="articles/Eternals:-A-Philosophical-Masterpiece.html">
+                <div class="info-container">
+                    <img src="images/image-106.png" width="100%" height="auto">
+                    <p class="topic">Opinion</p>
+                    <div class="title">Eternals: A Philosophical Masterpiece</div>
+                    <div class="description">Last Friday, Marvel released its much anticipated 25th film &quot;Eternals.&quot; Needless to say, the expectations were high leading up to its release.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/University-Applications:-What's-the-Difference-Between-Early-Decision,-Early-Action,-and-Regular-Decision.html">
+                <div class="info-container">
+                    <img src="images/image-41.png" width="100%" height="auto">
+                    <p class="topic">Education</p>
+                    <div class="title">University Applications: What&#39;s Early Decision, Early Action, and Regular Decision?</div>
+                    <div class="description">When applying to university, the time at which one applies and the strategy one uses may influence one&#39;s chances of getting in. In the United States, there are a few different pathways one can take when applying to post&ndash;secondary. Which one would you take?
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/No-Mr.-Trudeau,-You-Haven’t-Won-Yet.html">
+                <div class="info-container">
+                    <img src="images/image-105.png" width="100%" height="auto">
+                    <p class="topic">Opinion</p>
+                    <div class="title">No Mr. Trudeau, You Haven’t Won Yet</div>
+                    <div class="description">After Trudeau triggered a snap election on August 15th, 2021, it seems that those opposed to his decision are working harder to win.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+                <a href="articles/Wilson-Miao's-Message-to-Students:-The-Future-is-For-You.html">
+                    <div class="info-container">
+                        <img src="images/image-42.png" width="100%" height="auto">
+                        <p class="topic">Politics</p>
+                        <div class="title">Wilson Miao&#39;s Message to Students: The Future is For You</div>
+                        <div class="description">For students who are not yet eligible to vote, Mr. Miao highly recommends that they engage in the political process by volunteering. He advises that students do not become disappointed if they are turned down because rejections can help students learn how to do better next time.
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <div class="article-container">
+                <a href="articles/UPS-Loses-100+-AP-Exams-in-Transit.html">
+                    <div class="info-container">
+                        <img src="images/image-43.png" width="100%" height="auto">
+                        <p class="topic">Education</p>
+                        <div class="title">UPS Loses 100+ AP Exams in Transit</div>
+                        <div class="description">Recently, dozens of Starpoint Central High School students&#39; exams went missing onboard a UPS, a global shipping company, which was making its way to a grading center. 
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <div class="article-container">
+                <a href="articles/Justin-Trudeau-Calls-Snap-Election-for-September-20,-2021.html">
+                    <div class="info-container">
+                        <img src="images/image-44.png" width="100%" height="auto">
+                        <p class="topic">Politics</p>
+                        <div class="title">Justin Trudeau Calls Snap Election for September 20, 2021</div>
+                        <div class="description">On Sunday, August 15th, Justin Trudeau officially triggered an early federal election, in which voters will be going to the polls on September 20th, 2021. Trudeau reasoned that it was vital for Canadians to be able to voice their opinions during this “consequential moment."
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <div class="article-container">
+                <a href="articles/7-Tips-for-a-Productive-Summer.html">
+                    <div class="info-container">
+                        <img src="images/image-45.png" width="100%" height="auto">
+                        <p class="topic">Opinion</p>
+                        <div class="title">7 Tips for a Productive Summer</div>
+                        <div class="description">APs finished, final exams wrapped up, and schools let out for 3 delightful months. But with all this free time on your hands&mdash;not to mention a world still hampered by pandemic protocol&mdash;what is there left to do?
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <div class="article-container">
+                <a href="articles/How-the-2021-AP-Exams-were-Different-and-How-You-can-be-Prepared-for-Future-Exams.html">
+                    <div class="info-container">
+                        <img src="images/image-46.png" width="100%" height="auto">
+                        <p class="topic">Education</p>
+                        <div class="title">How the 2021 AP Exams were Different and How You can be Prepared for Future Exams</div>
+                        <div class="description">Last year, all AP exams were administered online. The AP exams before 2020 were traditional pencil and paper exams. In an effort to protect the integrity of AP exams and also protect the safety of students, the College Board proceeded to provide AP exams both in school and digitally this year.
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <div class="article-container">
+                <a href="articles/Vancouver-School-Board-Discontinuing-Honours-Programs-Effective-This-Fall.html">
+                    <div class="info-container">
+                        <img src="images/image-47.png" width="100%" height="auto">
+                        <p class="topic">Education</p>
+                        <div class="title">Vancouver School Board Discontinuing Honours Programs Effective This Fall</div>
+                        <div class="description">Vancouver students will not be able to choose honours programs beginning this fall. Honours English has already been eliminated by the school board and honours math and science will be cut soon. 
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <div class="article-container">
+                <a href="articles/Hikes-to-do-in-Vancouver.html">
+                    <div class="info-container">
+                        <img src="images/image-48.png" width="100%" height="auto">
+                        <p class="topic">Education</p>
+                        <div class="title">Hikes to do in Vancouver</div>
+                        <div class="description">Hiking is an excellent way to get exercise and go outside! You get to soak in the beauty of nature while enjoying all the uplifting emotions exercise brings.
+                        </div>
+                    </div>
+                </a>
+            </div>
+        <div class="article-container">
+            <a href="articles/More-Applicants-Rejected-Than-Ever-Before-in-the-U.S.-(2021).html">
+                <div class="info-container">
+                    <img src="images/image-49.png" width="100%" height="auto">
+                    <p class="topic">Education</p>
+                    <div class="title">More Applicants Rejected Than Ever Before in the U.S. (2021)</div>
+                    <div class="description">In 2021, a record high number of seniors were rejected from U.S. colleges in 2021. In fact, admission rates dropped over 34% among the 10 most competitive colleges in the United States. 
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/How-to-Avoid-the-Harms-of-a-Sedentary-Lifestyle.html">
+                <div class="info-container">
+                    <img src="images/image-78.png" width="100%" height="auto">
+                    <p class="topic">Lifestyle</p>
+                    <div class="title">How to Avoid the Harms of a Sedentary Lifestyle</div>
+                    <div class="description">Sedentary lifestyles refer to spending eight or more hours a day, twenty days a month in a seated position. As people spend more time on video conferencing, video games, online movies, and social media, they can severely damage their physical health.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/The-Impact-of-Having-Hobbies.html">
+                <div class="info-container">
+                    <img src="images/image-79.png" width="100%" height="auto">
+                    <p class="topic">Lifestyle</p>
+                    <div class="title">The Impact of Having Hobbies</div>
+                    <div class="description">What is the difference between a hobby and a job? Or a hobby and school? A hobby adds enjoyment and fun to life, along with personal and social growth. It is something one can do for themselves.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/5-Houseplants-that-are-Easy-to-Take-Care-of.html">
+                <div class="info-container">
+                    <img src="images/image-80.png" width="100%" height="auto">
+                    <p class="topic">Opinion</p>
+                    <div class="title">5 Houseplants that are Easy to Take Care of</div>
+                    <div class="description">Indoor house plants have been used to decorate homes for ages, but that trend has recently been increasing as people become more environmentally conscious. Having plants of your own helps to bring a bit of the natural world into your home and has great benefits.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/TUEX-Education:-A-Tutoring-Community-for-All.html">
+                <div class="info-container">
+                    <img src="images/image-81.png" width="100%" height="auto">
+                    <p class="topic">Collaboration</p>
+                    <div class="title">TUEX Education: A Tutoring Community for All</div>
+                    <div class="description">Based in Vancouver, TUEX Education is an online platform that matches students with experienced tutors. Unlike other tutoring platforms, TUEX gives tutors the freedom to set their own prices, and students likewise are given the flexibility to choose their tutors, depending on their budget, needs, preferred languages, and more.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Why-Starting-a-Side-Hustle-Can-Be-One-of-the-Most-Effective-Ways-to-Build-Wealth.html">
+                <div class="info-container">
+                    <img src="images/image-82.png" width="100%" height="auto">
+                    <p class="topic">Opinion</p>
+                    <div class="title">Why Starting a Side Hustle Can Be One of the Most Effective Ways to Build Wealth</div>
+                    <div class="description">A common mistake people make when planning for their future is assuming that obtaining a university degree will lead straight to a well-paying job. Learn how starting a side hustle can be one way to earn money and achieve your goals.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Developing-Internal-Motivation-to-Perform-Well.html">
+                <div class="info-container">
+                    <img src="images/image-83.png" width="100%" height="auto">
+                    <p class="topic">Lifestyle</p>
+                    <div class="title">Developing Internal Motivation to Perform Well</div>
+                    <div class="description">If there were no more prizes, certificates, or awards, would you still be motivated? 
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/How-a-Credit-Card-Really-Works,-and-the-Best-Way-to-Stay-Out-of-Debt.html">
+                <div class="info-container">
+                    <img src="images/image-84.png" width="100%" height="auto">
+                    <p class="topic">Lifestyle</p>
+                    <div class="title">How a Credit Card Really Works, and the Best Way to Stay Out of Debt</div>
+                    <div class="description">The majority of Canadians today are struggling with credit card debt. As high school students begin to earn more money and wish to become more financially independent, the option to get a credit card may seem appealing.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Curate-a-Sustainable-Wardrobe.html">
+                <div class="info-container">
+                    <img src="images/image-85.png" width="100%" height="auto">
+                    <p class="topic">Lifestyle</p>
+                    <div class="title">Curate a Sustainable Wardrobe</div>
+                    <div class="description">Sustainable clothing has become a trend in recent years. Small businesses and large retailers are advertising organic fabrics and vintage collections.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/The-SAT-Subject-Test-and-SAT-Essay-Will-No-Longer-be-Offered-by-the-College-Board.html">
+                <div class="info-container">
+                    <img src="images/image-86.png" width="100%" height="auto">
+                    <p class="topic">Education</p>
+                    <div class="title">The SAT Subject Test and SAT Essay Will No Longer be Offered by the College Board</div>
+                    <div class="description">As the pandemic impacted the lives of many students and created more barriers to academic success, the College Board has decided to adapt its programs with the new reality.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Taking-the-New-Driver's-Knowledge-Test.html">
+                <div class="info-container">
+                    <img src="images/image-87.png" width="100%" height="auto">
+                    <p class="topic">British Columbia</p>
+                    <div class="title">Taking the New Driver&#39;s Knowledge Test</div>
+                    <div class="description">Many people are interested in learning to drive once they reach the eligible age of sixteen in British Columbia. Before you can legally get behind the wheel, you need to take a knowledge test, which is provided by ICBC and concerns the rules of the road.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/A-Guide-to-New-Year's-Goals.html">
+                <div class="info-container">
+                    <img src="images/image-88.png" width="100%" height="auto">
+                    <p class="topic">2021</p>
+                    <div class="title">A Guide to New Year&#39;s Goals</div>
+                    <div class="description">New Year&#39;s is a time when resolutions are set with bright visions of personal evolution. These midnight declarations have a reputation for being unattainable and idealistic. Motivation can only take us so far. But goals can be effective as long as they are realistic, personal, and smart. 
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/5-Must-Read-Books-to-Enjoy.html">
+                <div class="info-container">
+                    <img src="images/image-104.png" width="100%" height="auto">
+                    <p class="topic">Opinion</p>
+                    <div class="title">5 Must&ndash;Read Books to Enjoy</div>
+                    <div class="description">Reading is a timeless pursuit for everyone to enjoy, and exploring the worlds authors have created for us can be scary, relaxing, exciting and much more. The books listed here are five must&ndash;reads for the remainder of the holidays. 
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/The-Harms-of-Sleep-Deprivation-and-How-to-Mitigate-Them.html">
+                <div class="info-container">
+                    <img src="images/image-89.png" width="100%" height="auto">
+                    <p class="topic">Lifestyle</p>
+                    <div class="title">The Harms of Sleep Deprivation and How to Mitigate Them</div>
+                    <div class="description">An average teenager should have at least 8-10 hours of sleep every night. However, the average sleeping time is only 7 hours per day for a teenager.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/MBTI-Personalities:-What-Personality-Do-You-Have.html">
+                <div class="info-container">
+                    <img src="images/image-90.png" width="100%" height="auto">
+                    <p class="topic">Lifestyle</p>
+                    <div class="title">MBTI Personalities: What Personality Do You Have?</div>
+                    <div class="description">The Myers–Briggs Type Indicator (MBTI) personality test is one that categorises people into 1 of 16 personalities. The test is widely used by enterprises, academies, and at seminars. It has also sparked debates on social media. So, what exactly is the MBTI personality test? Is it truly reliable?
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Apps-that-Help-Students-Study.html">
+                <div class="info-container">
+                    <img src="images/image-103.png" width="100%" height="auto">
+                    <p class="topic">Opinion</p>
+                    <div class="title">Apps that Help Students Study</div>
+                    <div class="description">Studying can be tough. Whether you get distracted easily, have a poor memory, or tend to fall asleep on your notes, having a good study routine can be incredibly useful. Read this article to find apps you can use, regardless of whether you own a phone or not.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/How-an-Unclosed-AP-World-History-Live-Chat-Formed-Study-Bubbly.html">
+                <div class="info-container">
+                    <img src="images/image-91.png" width="100%" height="auto">
+                    <p class="topic">Education</p>
+                    <div class="title">How an Unclosed AP World History Live Chat Formed Study Bubbly</div>
+                    <div class="description">On one fateful day, the College Board left the AP World History live chat open. This caused many students to start chatting, and quickly a discord server was made...
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Sleep-to-Study,-Useful-Apps-for-High-School-Students.html">
+                <div class="info-container">
+                    <img src="images/image-102.png" width="100%" height="auto">
+                    <p class="topic">Opinion</p>
+                    <div class="title">Sleep to Study, Useful Apps for High School Students</div>
+                    <div class="description">With a limited amount of storage on your phone, it can be crucial to find the right apps to download to help enhance all parts of your life. Here are some useful apps separated into categories. 
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Should-Students-Focus-on-a-Dream-Job.html">
+                <div class="info-container">
+                    <img src="images/image-92.png" width="100%" height="auto">
+                    <p class="topic">Lifestyle</p>
+                    <div class="title">Should Students Focus on a Dream Job?</div>
+                    <div class="description">From a young age, students are asked about their career goals. A dream job changes over the years as interests develop and logic overcomes imagination.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Ways-to-be-Involved-in-an-Election-Before-You-Can-Vote.html">
+                <div class="info-container">
+                    <img src="images/image-116.png" width="100%" height="auto">
+                    <p class="topic">Politics</p>
+                    <div class="title">Ways to be Involved in an Election Before You Can Vote</div>
+                    <div class="description">As teenagers, it can often be frustrating to observe elections as they come and be unable to cast a ballot. But just because we cannot vote yet does not mean we cannot still be involved in elections and do our best to contribute.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Despite-the-Onset-of-the-Pandemic,-Almost-2.2-Million-Students-in-the-Class-of-2020-Took-the-SAT.html">
+                <div class="info-container">
+                    <img src="images/image-93.png" width="100%" height="auto">
+                    <p class="topic">Education</p>
+                    <div class="title">Despite the Onset of the Pandemic, Almost 2.2 Million Students in the Class of 2020 Took the SAT</div>
+                    <div class="description">Despite the abrupt changes brought by the coronavirus pandemic, nearly 2.2 million students in the class of 2020 wrote the SAT. Surprisingly, this number is quite similar to the number of students in the class of 2020 who took the SAT in 2019, which was over 2.2 million.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Movies-and-TV-Shows-to-Watch-in-2020.html">
+                <div class="info-container">
+                    <img src="images/image-101.png" width="100%" height="auto">
+                    <p class="topic">Opinion</p>
+                    <div class="title">Movies and TV Shows to Watch in 2020</div>
+                    <div class="description">Being stuck at home during the pandemic can be extremely boring and dull. Here are some movies and tv shows that you might like to watch at home.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Students-Demand-School-Reform-in-Thailand.html">
+                <div class="info-container">
+                    <img src="images/image-94.png" width="100%" height="auto">
+                    <p class="topic">Education</p>
+                    <div class="title">Students Demand School Reform in Thailand</div>
+                    <div class="description">Demonstrations led by Thai students have been going on since mid-July and students are demanding for more freedom in school classrooms and less strict rules on student uniforms and behaviour.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Why-Everyone-Should-Watch-the-Social-Dilemma.html">
+                <div class="info-container">
+                    <img src="images/image-100.png" width="100%" height="auto">
+                    <p class="topic">Opinion</p>
+                    <div class="title">Why Everyone Should Watch the Social Dilemma</div>
+                    <div class="description">The Social Dilemma is a new Netflix documentary, diving into how technology is changing our behavior, and interfering with our mental health and social skills.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/What-You-Need-to-Know-About-British-Universities.html">
+                <div class="info-container">
+                    <img src="images/image-95.png" width="100%" height="auto">
+                    <p class="topic">Education</p>
+                    <div class="title">What You Need to Know About British Universities</div>
+                    <div class="description">The United Kingdom is home to many prestigious universities. Additionally, while Canadian and British Universities have a lot of similarities in their academic projects, the differences are salient.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Five Great Places to Visit in BC.html">
+                <div class="info-container">
+                    <img src="images/image-99.png" width="100%" height="auto">
+                    <p class="topic">Opinion</p>
+                    <div class="title">Five Great Places to Visit in BC</div>
+                    <div class="description">The coronavirus pandemic made travelling abroad an unviable option for most people this summer. After months spent indoors with little social interaction, people were anxious to go outside whenever possible.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/American-or-Canadian-Universities:-Finding-What-is-Best-for-You.html">
+                <div class="info-container">
+                    <img src="images/image-96.png" width="100%" height="auto">
+                    <p class="topic">Education</p>
+                    <div class="title">American or Canadian Universities: Finding What is Best for You</div>
+                    <div class="description">Due to the proximity of the geographical locations of Canada and the U.S., tens of thousands of Canadian students choose to study in American universities every year to experience a different educational environment and education system.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/The-Consequences-of-Having-Participation-Awards.html">
+                <div class="info-container">
+                    <img src="images/image-97.png" width="100%" height="auto">
+                    <p class="topic">Education</p>
+                    <div class="title">The Consequences of Having Participation Awards</div>
+                    <div class="description">Everyone is a winner. This is often the concept that is emphasized when participation awards are handed out to competitors. Although well&ndash;intended, there are important ramifications that need to be considered when evaluating the value of participation awards. 
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/What-is-Education-Like-in-the-World’s-Happiest-Country.html">
+                <div class="info-container">
+                    <img src="images/image-98.png" width="100%" height="auto">
+                    <p class="topic">Education</p>
+                    <div class="title">What is Education Like in the World&#39;s Happiest Country?</div>
+                    <div class="description">One attaining higher education can mean achieving one’s dreams, living flourishing lives, and being rewarded for one’s commitments. However, the relationship between happiness and education can rather become tainted, where higher levels of education no longer associate with higher levels of happiness, due to increased levels of stress, competition, and anxiety. 
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="../">
+                    <img src="morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset=utf-8>
+
+<title>Morara News</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f7e8448d89.js" crossorigin="anonymous"></script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.morara {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-top: 6px solid black;
+    border-bottom: 1px solid black;
+}
+
+.navbar a {
+    font-family: 'Inter';
+    padding: 14px 16px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid black;
+}
+
+.category {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+}
+
+.category a {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+}
+
+#red {
+    color: red;
+    background-color: white;
+}
+
+.category a:hover, #red:hover {
+    color: grey;
+    transition: 1s;
+}
+
+.category_container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+    max-width: 1100px;
+    font-family: "Libre Franklin";
+    font-weight: 900;
+    text-transform: none;
+    font-size: 24px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+    padding-bottom: 20px;
+}
+
+.more_articles {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+    padding-bottom: 20px;
+}
+
+.container_last {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    max-width: 1100px;
+}
+
+.article-container {
+    width: 100%;
+    flex: 0 0 33.33333%;
+}
+
+.info-container {
+    padding: 10px;
+}
+
+.info-container:hover {
+    background-color: rgb(255, 235, 235);
+    transition: 0.5s;
+}
+
+.topic {
+    color: red;
+    font-family: "Inter";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 9px;
+}
+
+.title {
+    font-family: "Libre Franklin";
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.description {
+    font-family: "Libre Franklin";
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#b, #c, #d, #e, #f, #g {
+    margin-top: 20px;
+}
+
+.close_btn {
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.open {
+    border-radius: 15px;
+    padding: 20px 150px 20px 150px;
+    border: none;
+    font-family: 'Libre Franklin';
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.open:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+}
+
+.screen_width {
+    border-top: 5px solid black;
+    margin-top: 50px;
+}
+
+.footer_container_l {
+    float: left;
+    width: 60%;
+    padding: 50px 0px 50px 200px;
+}
+
+.footer_container_r {
+    float: left;
+    width: 40%;
+    padding: 50px 200px 50px 50px;
+    font-family: 'Libre Franklin'; 
+    font-size: 14px;
+}
+
+.footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer_description {
+    margin-left: 5px;
+    padding-top: 15px;
+    font-size: 13px;
+    font-family: 'Libre Franklin';
+}
+
+@media (max-width: 1120px) {
+    .category {
+        display: none;
+    }
+    
+    .category_container {
+        margin-top: 15px;
+    }
+    .footer_container_l {
+        padding: 50px 10px 50px 10px;
+    }
+    
+    .footer_container_r {
+        padding: 50px 10px 50px 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container, .category_container, .container_last {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .article-container {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .article-container {
+        flex: 0 0 100%;
+    }
+    
+    .open {
+        padding: 20px 50px 20px 50px;
+    }
+    
+    .footer_description {
+        font-size: 12px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+    <div class="center">
+        <div class="morara">
+            <a href="../">
+                <img src="morara-6.png" width="200">
+            </a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="about.html" target="_blank">About</a>
+        <a href="join.html" target="_blank">Join</a>
+        <a href="contact.html" target="_blank">Contact</a>
+        <a href="terms.html" target="_blank">Terms</a>
+        <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+    </div>
+    
+    <div class="category">
+        <a href="../#a">Student Life</a> <!--incl. Opinion & Education-->
+        <a href="">World</a>
+        <a href="../#c" id="red">Interviews</a>
+        <a href="../#d">Sports &#38; Entertainment</a>
+        <a href="../#e">Coronavirus</a>
+        <a href="../#f">Business &#38; Technology</a>
+        <a href="../#g">Environment</a>
+    </div>
+    
+    <!--Student Life-->
+    <div class="category_container" id="b">
+        World
+    </div>
+    
+    <div class="container">
+        <div class="article-container">
+            <a href="articles/The-Gabby-Petito-Case.html">
+                <div class="info-container">
+                    <img src="images/image-107.png" width="100%" height="auto">
+                    <p class="topic">U.S.</p>
+                    <div class="title">The Gabby Petito Case</div>
+                    <div class="description">On Tuesday, September 23, the FBI confirmed that the human remains found in Wyoming's Bridger-Teton National Forest were those of 22-year-old Gabby Petito, who was reported missing more than a week earlier.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/The-California-Recall-Election-Explained.html">
+                <div class="info-container">
+                    <img src="images/image-108.png" width="100%" height="auto">
+                    <p class="topic">U.S.</p>
+                    <div class="title">The California Recall Election, Explained</div>
+                    <div class="description">On September 14, 2021, California participated in a recall election in an effort to remove the incumbent governor Gavin Newsom from office. By September 15, after counting millions of ballots, the result was clear: Newsom would stay in power. So, what happened to California to get to this point?
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/The-Ravages-of-Hurricane-Ida.html">
+                <div class="info-container">
+                    <img src="images/image-109.png" width="100%" height="auto">
+                    <p class="topic">International</p>
+                    <div class="title">The Ravages of Hurricane Ida</div>
+                    <div class="description">Exactly 16 years after Hurricane Katrina&mdash;the costliest hurricane in history&mdash;made landfall in New Orleans, Hurricane Ida has ravaged the region once more. Emerging from the Gulf of Mexico on August 23rd, 2021, Ida ravaged parts of Cuba before making landfall in Louisiana.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Afghanistan-in-Crisis:-What's-Next.html">
+                <div class="info-container">
+                    <img src="images/image-110.png" width="100%" height="auto">
+                    <p class="topic">International</p>
+                    <div class="title">Afghanistan in Crisis: What&#39;s Next?</div>
+                    <div class="description">Recent escalations in tensions in Afghanistan, a result of the withdrawal of US troops and the subsequent advancement of the politically extreme Taliban, begs the question: what&#39;s next for the country? 
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Kelowna-Crane-Collapse-Leaves-Several-Dead.html">
+                <div class="info-container">
+                    <img src="images/image-111.png" width="100%" height="auto">
+                    <p class="topic">Canada</p>
+                    <div class="title">Kelowna Crane Collapse Leaves Several Dead</div>
+                    <div class="description">The alarm bells rang on July 12, 2021, when a crane collapsed during a condominium construction project in downtown Kelowna, British Columbia.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Canada's-Record-High-Temperature:-Lytton,-BC.html">
+                <div class="info-container">
+                    <img src="images/image-112.png" width="100%" height="auto">
+                    <p class="topic">Canada</p>
+                    <div class="title">Canada&#39;s Record High Temperature: Lytton, BC</div>
+                    <div class="description">It is July 5, 1937, in the small Saskatchewan town of Yellow Grass. The thermometer reads a sweltering 45°C (113°F), the highest temperature ever recorded in Canada at that time. This record would go on to cling to its title for the next eight decades, until it was surpassed by a historic heat wave Lytton, BC.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/India's-COVID-19-Crisis.html">
+                <div class="info-container">
+                    <img src="images/image-136.png" width="100%" height="auto">
+                    <p class="topic">India</p>
+                    <div class="title">India&#39;s COVID-19 Crisis</div>
+                    <div class="description">As of May 6, according to India’s Ministry of Health and Welfare, there are about 3.6 million active cases, and 230,000 deaths. Estimates vary across sources, but India's total cases so far number about 21 million.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/The-73–year-Royal-Story-of-Prince-Philip.html">
+                <div class="info-container">
+                    <img src="images/image-113.png" width="100%" height="auto">
+                    <p class="topic">International</p>
+                    <div class="title">The 73&ndash;year Royal Story of Prince Philip</div>
+                    <div class="description">Husband of Queen Elizabeth II, Prince Philip has been key to the enduring monarchy in the United Kingdom. The queen described him as her &quot;strength and stay&quot; at the couple’s golden wedding anniversary in 1997.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="What is the Land Back Movement.html">
+                <div class="info-container">
+                    <img src="images/image-114.png" width="100%" height="auto">
+                    <p class="topic">British Columbia</p>
+                    <div class="title">What is the Land Back Movement?</div>
+                    <div class="description">Wet'suwet'en land defenders set up blockades and demonstrated to prevent the pipeline from being constructed on their territory.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/How-Lunar-New-Year-is-Celebrated-in-China.html">
+                <div class="info-container">
+                    <img src="images/image-115.png" width="100%" height="auto">
+                    <p class="topic">International</p>
+                    <div class="title">How Lunar New Year is Celebrated in China</div>
+                    <div class="description">The Lunar new year is particularly celebrated in Eastern Asia, with its origin in China. The first Lunar New Year celebration can be traced back to 475 BC &ndash; 221 AD.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/The-Debate-Over-the-Eurozone:-Should-It-Be-Abolished.html">
+                <div class="info-container">
+                    <img src="images/image-117.png" width="100%" height="auto">
+                    <p class="topic">Europe</p>
+                    <div class="title">The Debate Over the Eurozone: Should It Be Abolished?</div>
+                    <div class="description">The Eurozone, commonly referred to as the Euro, is the common currency of 19 member states of the European Union. The Euro is essentially run by the European Central Bank, which is located in Frankfurt am Main, Germany, and carries out similar roles as other national central banks.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Will-Canada-Ever-Win-a-Seat-on-the-UN-Security-Council.html">
+                <div class="info-container">
+                    <img src="images/image-118.png" width="100%" height="auto">
+                    <p class="topic">Canada</p>
+                    <div class="title">Will Canada Ever Win a Seat on the UN Security Council?</div>
+                    <div class="description">On June 17th, 2020, Canada lost its bid for a seat at the United Nations Security Council to Norway and Ireland. The loss was an unfortunate defeat for Justin Trudeau, who has previously pledged for Canada to take on a bigger role in the international community.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Regional-Tensions-Mount-Over-Grand-Ethiopian-Renaissance-Dam.html">
+                <div class="info-container">
+                    <img src="images/image-119.png" width="100%" height="auto">
+                    <p class="topic">International</p>
+                    <div class="title">Regional Tensions Mount Over Grand Ethiopian Renaissance Dam</div>
+                    <div class="description">The Grand Renaissance Dam is located near the Sudan&ndash;Ethiopia border, upstream of the convergence between the so&ndash;called "blue" and "white" branches of the Nile River. Ethiopia, the country behind this project, sees the construction and usage of the Grand Renaissance Dam to be a hopeful opportunity.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/Power-of-the-Passport.html">
+                <div class="info-container">
+                    <img src="images/image-120.png" width="100%" height="auto">
+                    <p class="topic">International</p>
+                    <div class="title">Power of the Passport</div>
+                    <div class="description">Many of us underestimate the importance and value of having a passport that allows us to travel the world. Today, many of us take a passport for granted since most people are able to travel freely with their passports and don’t take the time to understand the different types of passports that exist.
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="article-container">
+            <a href="articles/South-Koreans-Are-Staying-Single—Why.html">
+                <div class="info-container">
+                    <img src="images/image-121.png" width="100%" height="auto">
+                    <p class="topic">International</p>
+                    <div class="title">South Koreans Are Staying Single&mdash;Why?</div>
+                    <div class="description">Many South Koreans are giving up the possibility of having a family altogether by choosing not to go on dates, getting married, and bearing children.
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="screen_width">
+        <div class="footer">
+            <div class="footer_container_l">
+                <a href="../">
+                    <img src="morara-6.png" width="175">
+                </a>
+                <div class="footer_description">
+                    Morara News, previously known as Vancouver Student Voices, is a student&ndash;led and independent news platform, in which students are able to comfortably share their opinions on current events and issues impacting them. This way, Morara News hopes to broaden the reach of student voices and inform our readers about diverse thoughts and ideas.
+                    
+                    <p style="padding-top: 20px;">Website design by Chris Oh</p>
+                </div>
+            </div>
+            <div class="footer_container_r">
+                <b style="font-size: 18px;">Info</b>
+                <hr>
+                <a href="about.html" target="_blank">
+                    <p>About</p>
+                </a>
+                <a href="join.html" target="_blank">
+                    <p>Join</p>
+                </a>
+                <a href="contact.html" target="_blank">
+                    <p>Contact</p>
+                </a>
+                <a href="terms.html" target="_blank">
+                    <p>Terms</p>
+                </a>
+                <a href="https://youtube.com/channel/UCQ7CiZIwcshAMxNqc1JSt6A" target="_blank"><i class="fa-solid fa-circle-play" style="font-size: 20px;"></i></a>&nbsp;&nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
